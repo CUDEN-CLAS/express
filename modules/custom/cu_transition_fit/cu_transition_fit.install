@@ -17,8 +17,8 @@ function cu_transition_fit_install() {
     'cu_video',
     'cu_permissions',
     'cu_layout',
-    'cu_theme_picker'
-    'memecache'
+    'cu_theme_picker',
+    'memcache'
   ));
 
   //uninstall modules

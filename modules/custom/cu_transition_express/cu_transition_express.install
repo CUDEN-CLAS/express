@@ -17,11 +17,19 @@ function cu_transition_express_install() {
     'express_add_content',
     'express_settings',
     'express_permissions'
+    'express_final'
   ));
+
   node_access_rebuild(TRUE);
 
-  // revert all features
+  // revert any features we missed in 7.12 or that cahnged in 2.0 again
   cu_transition_express_revert_features('files');
+
+    // enable new modules
+  module_enable(array(
+    'vanish',
+    'memcache',
+  ));
 
 }
 
