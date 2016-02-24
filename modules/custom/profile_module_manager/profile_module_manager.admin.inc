@@ -39,6 +39,12 @@ function profile_module_manager_admin_settings() {
     '#title' => t('Ignore these projects'),
     '#description' => t('Comma separated list of the machine names of the permissions to ignore like \'varnish, memcache\'.'),
   );
+  $form['profile_module_manager_enable_chunks'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('profile_module_manager_enable_chunks', 1),
+    '#title' => t('Bundle Enable Chunks'),
+    '#description' => t('Enter an integer for the number of modules enabled in each batch. A smaller chunk size will give users more feedback when enabling a bundle but it will make the enabling process longer for the user.'),
+  );
 
   $bundles = array_keys(profile_module_manager_get_bundles('all'));
   $form['profile_module_manager_bundle_ignore'] = array(
@@ -231,7 +237,7 @@ function profile_module_manager_bundle_enable($bundle) {
     }
 
     // Size of modules to enable in each batch.
-    $limit = 3;
+    $limit = intval(variable_get('profile_module_manager_enable_chunks', 1));
     $module_chunks = array_chunk($modules_to_enable, $limit, TRUE);
 
     // Chunk modules into groups.
