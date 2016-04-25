@@ -14,9 +14,9 @@ function cu_ldap_form_alter(&$form, &$form_state, $form_id) {
     case 'user_login':
       drupal_set_title(t('Log in'));
     case 'user_login_block':
-      $form['name']['#title'] = t('CU Login Name');
+      $form['name']['#title'] = t('CU Denver Login Name');
       $form['name']['#description'] = '';
-      $form['pass']['#title'] = t('IdentiKey Password');
+      $form['pass']['#title'] = t('University Password');
       $form['pass']['#description'] = '';
       break;
   }
