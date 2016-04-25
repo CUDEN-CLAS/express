@@ -61,6 +61,11 @@ function expressbase_preprocess_html(&$vars) {
   }
   // Add Campus name to title
   $vars['head_title_array']['slogan'] = 'University of Colorado Boulder';
+
+
+  // Add campus name to title
+  $vars['head_title_array']['slogan'] = 'University of Colorado Denver';
+
   $vars['head_title'] = implode(' | ', $vars['head_title_array']);
 
   // set classes for theme configs
@@ -146,9 +151,9 @@ function expressbase_page_alter(&$page) {
 function expressbase_preprocess_page(&$vars) {
   global $base_url;
   // Set site slogan so it can't be overriden
-  $vars['site_slogan'] = 'University of Colorado <strong>Boulder</strong>';
+  $vars['site_slogan'] = 'Learn with <strong>Purpose</strong>';
   // add print logo
-  $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Boulder" />';
+  $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Denver" />';
   // hide title on homepage
   if($vars['is_front'] == TRUE) {
     $vars['title_hidden'] = TRUE;
@@ -328,8 +333,8 @@ function expressbase_preprocess_region(&$vars) {
         $vars['site_name'] = variable_get('site_name', NULL);
       }
 
-      $vars['site_slogan'] = 'University of Colorado <strong>Boulder</strong>';
-      $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Boulder" />';
+      $vars['site_slogan'] = 'Learn with <strong>Purpose</strong>';
+      $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Denver" />';
 
       break;
     case 'secondary_menu':
