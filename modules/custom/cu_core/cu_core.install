@@ -76,9 +76,9 @@ function cu_core_install() {
   // Must be set before cu_forms_bundle is enabled
   variable_set('webform_install_add_body_field', TRUE);
 
-  variable_set('site_name', 'University of Colorado Boulder');
-  variable_set('site_name_1', 'University of Colorado Boulder');
-  variable_set('site_slogan', 'University of Colorado Boulder');
+  variable_set('site_name', 'University of Colorado Denver');
+  variable_set('site_name_1', 'University of Colorado Denver');
+  variable_set('site_slogan', 'University of Colorado Denver');
 
   variable_set('express_help_base_url', 'http://www.colorado.edu/webcentral');
 
@@ -101,7 +101,7 @@ function cu_core_install() {
 
   variable_set('user_external_invite_invite_template', '[user_external_invite:invite_custom]
 
-You have been invited to join the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
+You have been invited to join the [site:name] Web Express test website for CU Denver as an editor with [user_external_invite:invite_role] access privileges.
 
 To accept this invitation:
 1) Go to [user_external_invite:invite_link]
@@ -110,9 +110,9 @@ To accept this invitation:
 Upon completion, you will receive an email confirming your access.
 
 --
-The Web Express Team
+The Web Express Test
 http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+Tim.Stalker@ucdenver.edu');
 
   variable_set('user_external_invite_confirmation_template', 'We have received your request to grant [user_external_invite:invite_role] access to the following:
 
@@ -120,12 +120,12 @@ websupport@colorado.edu');
 
 An email invitation has been sent requesting the user to login and accept the invitation. Upon completion, a confirmation email will be sent.
 
-If you did not submit this request or need to modify it, please contact us at websupport@colorado.edu.
+If you did not submit this request or need to modify it, please contact Tim.Stalker@ucdenver.edu.
 
 --
-The Web Express Team
+The Web Express Test
 http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+Tim.Stalker@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_template', 'We are confirming [user_external_invite:invited_email] now has [user_external_invite:invite_role] access to the [site:name], [site:url], website.
 
@@ -133,9 +133,9 @@ Web Central:
 You can use the Web Central website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://www.colorado.edu/webcentral
 
 --
-The Web Express Team
+The Web Express Test
 http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+Tim.Stalker@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_confirmation_template', 'You have successfully joined the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
 
@@ -147,9 +147,9 @@ Web Central:
 You can use the Web Central website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://www.colorado.edu/webcentral
 
 --
-The Web Express Team
+The Web Express Test
 http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+Tim.Stalker@ucdenver.edu');
 
   // Set the syslog_identity variable to the SID.
   $cu_sid = variable_get('cu_sid', '');
