@@ -151,7 +151,7 @@ function expressbase_page_alter(&$page) {
 function expressbase_preprocess_page(&$vars) {
   global $base_url;
   // Set site slogan so it can't be overriden
-  $vars['site_slogan'] = 'Learn with <strong>Purpose</strong>';
+  $vars['site_slogan'] = 'Learn With <stron>Purpose</strong>';
   // add print logo
   $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Denver" />';
   // hide title on homepage
