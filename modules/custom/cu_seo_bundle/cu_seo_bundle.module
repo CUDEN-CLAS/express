@@ -72,17 +72,27 @@ function cu_seo_bundle_express_help($variables) {
   $variables['admin/config/search/metatags'][] = array(
     'title' => 'Metatag Settings Help',
     'short_title' => 'Metatag Settings Help',
-    'url' => 'http://www.colorado.edu/webcentral/node/724',
+    'url' => '/node/724',
   );
   $variables['admin/config/search/metatags/settings'][] = array(
     'title' => 'Metatag Settings Help',
     'short_title' => 'Metatag Settings Help',
-    'url' => 'http://www.colorado.edu/webcentral/node/724',
+    'url' => '/node/724',
   );
   $variables['admin/config/search/metatags/bulk-revert'][] = array(
     'title' => 'Metatag Settings Help',
     'short_title' => 'Metatag Settings Help',
-    'url' => 'http://www.colorado.edu/webcentral/node/724',
+    'url' => '/node/724',
+  );
+  $variables['admin/reports/linkchecker'][] = array(
+    'title' => 'Link Checker Help',
+    'short_title' => 'Link Checker Help',
+    'url' => '/node/1268',
+  );
+  $variables['admin/settings/seo/linkchecker-analyze'][] = array(
+    'title' => 'Link Checker Help',
+    'short_title' => 'Link Checker Help',
+    'url' => '/node/1268',
   );
 
   return $variables;
@@ -110,7 +120,7 @@ function cu_seo_bundle_menu() {
     'page callback' => 'drupal_goto',
     'page arguments' => array('admin/reports/linkchecker'),
     'access arguments' => array('administer express settings'),
-    'weight' => 26,
+    'weight' => 20,
   );
   $items['admin/settings/seo/verifications'] = array(
     'title' => 'Verifications',
@@ -119,7 +129,7 @@ function cu_seo_bundle_menu() {
     'page callback' => 'drupal_goto',
     'page arguments' => array('admin/config/search/verifications'),
     'access arguments' => array('administer site verify'),
-    'weight' => -25,
+    'weight' => 50,
   );
 
   return $items;

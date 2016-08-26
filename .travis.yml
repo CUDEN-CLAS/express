@@ -8,7 +8,6 @@ php:
 # We want builds of master and dev branches only.
 branches:
   only:
-    - master
     - dev
 
 # We need LDAP as long as it is in express_core. Need CGI for runserver in PHP 5.3.
@@ -106,6 +105,9 @@ install:
 
 before_script:
 
+  # Disable XDebug to speed up test runs.
+  - phpenv config-rm xdebug.ini
+
   - mysql -e 'create database drupal;'
 
   # Do the site install (either the current revision or old for the upgrade).
@@ -123,15 +125,15 @@ before_script:
 
   # Setting Behat environment
   - BUILD_TOP=`dirname $TRAVIS_BUILD_DIR`
-  - BEHAT_PARAMS='{"extensions":{"Drupal\\DrupalExtension":{"drupal":{"drupal_root":"BUILD_TOP/drupal"}},"Behat\\MinkExtension":{"base_url":"http://127.0.0.1:8080/"}}}'
+  - BEHAT_PARAMS='{"extensions":{"Drupal\\DrupalExtension":{"drupal":{"drupal_root":"BUILD_TOP/drupal"}},"Behat\\MinkExtension":{"base_url":"http://127.0.0.1:8080/","files_path":"/home/travis/build/CuBoulder/drupal/profiles/express/tests/behat/assets/"}}}'
   - BEHAT_PARAMS=`echo $BEHAT_PARAMS | sed -e s#BUILD_TOP#$BUILD_TOP#`
   - export BEHAT_PARAMS
 
 script:
   # Run Behat tests.
-  - ./bin/behat --config behat.yml --verbose --tags '~@max_execution_time'
+  - ./bin/behat --config behat.yml --verbose --tags '~@exclude_all_bundles'
   # Run tests that were timing out.
-  - ./bin/behat --config behat.yml --verbose --tags @max_execution_time
+  #- ./bin/behat --config behat.yml --verbose --tags @max_execution_time
 
 notifications:
   slack:

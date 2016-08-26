@@ -273,7 +273,7 @@ function _revert_bundle_on_error() {
  * Implements hook_modules_installed().
  * Run functions after bundles are enabled.
  */
-function profile_module_manager_modules_installed($modules) {
+function profile_module_manager_modules_enabled($modules) {
   foreach ($modules as $module) {
     // Only run these functions if module name includes _bundle
     if (strpos($module, '_bundle') !== false) {
@@ -293,4 +293,34 @@ function profile_module_manager_modules_installed($modules) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function profile_module_manager_theme(&$existing, $type, $theme, $path) {
+  $registry = array();
+  $template_dir = drupal_get_path('module', 'profile_module_manager') . '/templates';
+  $registry['profile_module_manager_bundle_page'] = array(
+    'template' => 'profile-module-manager-bundle-page',
+    'path' => $template_dir,
+  );
+  $registry['profile_module_manager_bundle_group'] = array(
+    'template' => 'profile-module-manager-bundle-group',
+    'path' => $template_dir,
+  );
+  $registry['profile_module_manager_bundle'] = array(
+    'template' => 'profile-module-manager-bundle',
+    'path' => $template_dir,
+  );
+  $registry['profile_module_manager_bundle_actions_disabled'] = array(
+    'template' => 'profile-module-manager-bundle-actions-disabled',
+    'path' => $template_dir,
+  );
+  $registry['profile_module_manager_bundle_actions_enabled'] = array(
+    'template' => 'profile-module-manager-bundle-actions-enabled',
+    'path' => $template_dir,
+  );
+  return $registry;
 }

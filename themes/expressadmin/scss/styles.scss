@@ -910,6 +910,7 @@ td.ctools-export-ui-operations {
 #edit-field-article-slider-filter-und,
 #edit-field-article-page-category-und,
 #edit-field-article-page-filter-und,
+#edit-field-article-term-und,
 #edit-field-people-list-department-und,
 #edit-field-people-list-person-type-und,
 #edit-field-people-filter-1-und,
@@ -966,4 +967,36 @@ td.ctools-export-ui-operations {
 
 .views-exposed-form .views-exposed-widget .form-submit, #ctools-export-ui-list-form .form-submit {
   margin-top: 1.7em;
+}
+
+/* Bulleted lists */
+ul.bullet-list {
+  list-style: disc;
+  padding-left: 1.5em;
+  > li {
+    list-style: disc;
+  }
+
+  ul {
+    list-style: circle;
+    padding-left: 1.5em;
+    > li {
+      list-style: circle;
+    }
+  }
+}
+
+/* Bundles */
+
+.module-bundle {
+  margin-bottom: 20px;
+  border-top:1px solid #e7e7e7;
+  padding:20px 0;
+}
+.bundle-enabled .module-bundle h3:before {
+  font-family: 'FontAwesome';
+  content: '\f00c';
+  margin-right:5px;
+  color: $green;
+
 }

@@ -47,24 +47,15 @@ function expressbase_preprocess_html(&$vars) {
     ),
   );
   drupal_add_html_head($element, 'ie_compatibility_mode');
-  // Setting title so we get the value from meta tag
-  // Get meta tag title - $vars['head_array']['title']
-  if (!empty($vars['head_array']['title'])) {
-    $meta_title = $vars['head_array']['title'];
-    // Get and trim site name
-    $site_name = trim(variable_get('site_name', ''));
-    // If site name is in meta tag title, remove site name from title array
-    $vars['head_title_array']['title'] = $vars['head_array']['title'];
-    if (strpos($meta_title, $site_name) !== false) {
-      unset($vars['head_title_array']['name']);
-    }
-  }
+
+  // Build title array
   // Add Campus name to title
-  $vars['head_title_array']['slogan'] = 'University of Colorado Boulder';
 
-
-  // Add campus name to title
   $vars['head_title_array']['slogan'] = 'University of Colorado Denver';
+
+
+  $slogan_title = variable_get('site_slogan_title', 'University of Colorado Denver');
+  $vars['head_title_array']['slogan'] = $slogan_title;
 
   $vars['head_title'] = implode(' | ', $vars['head_title_array']);
 
@@ -151,7 +142,10 @@ function expressbase_page_alter(&$page) {
 function expressbase_preprocess_page(&$vars) {
   global $base_url;
   // Set site slogan so it can't be overriden
-  $vars['site_slogan'] = 'Learn With <stron>Purpose</strong>';
+
+  $slogan_display = variable_get('site_slogan_display', 'Learn with <strong>Purpose</strong>');
+  $vars['site_slogan'] = $slogan_display;
+
   // add print logo
   $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Denver" />';
   // hide title on homepage
@@ -271,7 +265,7 @@ function expressbase_image_style(&$vars) {
  * Implements theme_breadcrumb().
  */
 function expressbase_breadcrumb($vars) {
-  $breadcrumb = $vars['breadcrumb'];
+  $breadcrumb = !empty($vars['breadcrumb']) ? $vars['breadcrumb'] : drupal_get_breadcrumb();
   $theme = variable_get('theme_default','');
   if (!empty($breadcrumb) && theme_get_setting('use_breadcrumbs', $theme)) {
     // Replace the Home breadcrumb with a Home icon
@@ -333,8 +327,10 @@ function expressbase_preprocess_region(&$vars) {
         $vars['site_name'] = variable_get('site_name', NULL);
       }
 
-      $vars['site_slogan'] = 'Learn with <strong>Purpose</strong>';
+      $slogan_display = variable_get('site_slogan_display', 'Learn with <strong>Purpose</strong>');
+      $vars['site_slogan'] = $slogan_display;
       $vars['print_logo'] = '<img src="' . $base_url . '/' . drupal_get_path('theme','expressbase') . '/images/print-logo.png" alt="University of Colorado Denver" />';
+
 
       break;
     case 'secondary_menu':
