@@ -45,7 +45,7 @@ function express_profile_configure_form() {
   $form = array();
 
   $options = array(
-    'cu_core' => st('Production'),
+    'ucd_core' => st('Production'),
     'cu_testing_core' => st('Testing'),
     'cu_pantheon_core' => st('Pantheon'),
   );
@@ -53,9 +53,9 @@ function express_profile_configure_form() {
   $form['express_core_version'] = array(
     '#type' => 'radios',
     '#title' => st('Which version of Express would you like to install?'),
-    '#description' => st('Testing will include the "cu_testing_core" module while "Production" will include the "cu_core" module.'),
+    '#description' => st('Testing will include the "cu_testing_core" module while "Production" will include the "ucd_core" module.'),
     '#options' => $options,
-    '#default_value' => 'cu_core',
+    '#default_value' => 'ucd_core',
   );
 
   $form['actions'] = array('#type' => 'actions');
