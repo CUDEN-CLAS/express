@@ -16,13 +16,13 @@ function cu_ldap_default_ldap_servers() {
   $ldap_servers_conf->sid = 'directory';
   $ldap_servers_conf->name = 'artemis.ucdenver.pvt';
   $ldap_servers_conf->status = TRUE;
-  $ldap_servers_conf->ldap_type = 'default';
+  $ldap_servers_conf->ldap_type = 'ad';
   $ldap_servers_conf->address = 'ldap://artemis.ucdenver.pvt';
   $ldap_servers_conf->port = 389;
   $ldap_servers_conf->tls = TRUE;
   $ldap_servers_conf->bind_method = 1;
   $ldap_servers_conf->binddn = 'clasmgmt';
-  $ldap_servers_conf->bindpw = '';
+  $ldap_servers_conf->bindpw = 'November#!%002';
   $ldap_servers_conf->basedn = array(
     0 => 'dc=ucdenver,dc=pvt',
   );
