@@ -133,7 +133,7 @@ function cu_sitewide_form_alter(&$form, &$form_state, $form_id) {
         $blocks = &$form['reactions']['plugins']['block']['selector'];
         $blocks['boxes']['#access'] = FALSE;
         $blocks['context_ui']['#access'] = FALSE;
-        $blocks['cu_alerts']['#access'] = FALSE;
+        //$blocks['cu_alerts']['#access'] = FALSE;
         $blocks['cu_block_selector']['#access'] = FALSE;
         $blocks['devel']['#access'] = FALSE;
         $blocks['diff']['#access'] = FALSE;
@@ -152,7 +152,7 @@ function cu_sitewide_form_alter(&$form, &$form_state, $form_id) {
         unset($regions['menu']);
         unset($regions['secondary_menu']);
         unset($regions['help']);
-        unset($regions['alerts']);
+        //unset($regions['alerts']);
 
         // Unset which reactions are available to use
         $reactions = &$form['reactions']['selector']['#options'];
