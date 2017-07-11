@@ -77,7 +77,7 @@ function ucd_core_install() {
   variable_set('site_name_1', 'University of Colorado Denver');
   variable_set('site_slogan', 'University of Colorado Denver');
 
-  variable_set('express_help_base_url', 'http://www.colorado.edu/webcentral');
+  variable_set('express_help_base_url', 'http://clas-test.ucdenver.edu/web-support');
 
 
   // Set message for when enabling of bundles is turned off.
@@ -121,14 +121,14 @@ You have been invited to join the [site:name] Web Express website as an editor w
 
 To accept this invitation:
 1) Go to [user_external_invite:invite_link]
-2) Login with your IdentiKey name and password.
+2) Login with your University ID and password.
 
 Upon completion, you will receive an email confirming your access.
 
 --
-The Web Express Team
-http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+The CLAS Web Express Team
+http://clas-test.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_confirmation_template', 'We have received your request to grant [user_external_invite:invite_role] access to the following:
 
@@ -136,36 +136,36 @@ websupport@colorado.edu');
 
 An email invitation has been sent requesting the user to login and accept the invitation. Upon completion, a confirmation email will be sent.
 
-If you did not submit this request or need to modify it, please contact us at websupport@colorado.edu.
+If you did not submit this request or need to modify it, please contact us at clas-web-support@ucdenver.edu.
 
 --
-The Web Express Team
-http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+The CLAS Web Express Team
+http://clas-test.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_template', 'We are confirming [user_external_invite:invited_email] now has [user_external_invite:invite_role] access to the [site:name], [site:url], website.
 
-Web Central:
-You can use the Web Central website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://www.colorado.edu/webcentral
+Web Support:
+You can use the Web Support website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas-test.ucdenver.edu/web-support
 
 --
-The Web Express Team
-http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+The CLAS Web Express Team
+http://clas-test.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_confirmation_template', 'You have successfully joined the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
 
 To access and edit this site:
 1) Go to [site:login-url]
-2) Login with your IdentiKey name and password.
+2) Login with your University ID and password.
 
-Web Central:
-You can use the Web Central website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://www.colorado.edu/webcentral
+Web Support:
+You can use the Web Support website website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas-test.ucdenver.edu/web-support
 
 --
-The Web Express Team
-http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+The CLAS Web Express Team
+http://clas-test.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
 
   // Set the syslog_identity variable to the SID.
   $cu_sid = variable_get('cu_sid', '');
@@ -219,7 +219,7 @@ The block System help was assigned to the invalid region help and has been disab
 
   // Set admin user email to something not admin@example.com.
   $admin_user = user_load(1);
-  $admin_user->mail = 'websupport@colorado.edu';
+  $admin_user->mail = 'clas-web-support@ucdenver.edu';
   $admin_user->name = $random_name;
   $admin_user->pass = $hashed_pass;
   $admin_user->status = 0;
@@ -235,7 +235,7 @@ The block System help was assigned to the invalid region help and has been disab
  */
 function ucd_core_update_7001() {
 
-  variable_set('express_help_base_url', 'https://www.colorado.edu/webcentral');
+  variable_set('express_help_base_url', 'https://clas-test.ucdenver.edu/web-support');
 
   variable_set('profile_module_manager_ignore', 'secure_permissions, express_permissions, cu_users, ucd_core, cu_help, cu_inventory, cu_inventory_stats, express_final');
 
@@ -540,7 +540,7 @@ function ucd_core_update_7012() {
 
   // Set admin user email to something not admin@example.com.
   $admin_user = user_load(1);
-  $admin_user->mail = 'websupport@colorado.edu';
+  $admin_user->mail = 'clas-web-support@ucdenver.edu';
   user_save($admin_user);
 
   ucd_core_inventory_update('7012');
