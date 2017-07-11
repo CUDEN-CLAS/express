@@ -52,7 +52,7 @@ function cu_users_update_7010() {
 
 /**
  * Create administrator drupalcs user and change sniderc's role to developer.
- */
+ 
 function cu_users_update_7011() {
   // If druaplcs user does not exist.
   $drupalcs_account = user_load_by_name('drupalcs');
@@ -95,6 +95,7 @@ function cu_users_update_7011() {
     $query->execute();
   }
 }
+*/
 
 /**
  * Create table for user invites.
@@ -121,48 +122,6 @@ function cu_users_update_7014() {
     $account = new stdClass();
     $account->name = 'stalkert';
     $account->mail = 'Tim.Stalker@ucdenver.edu';
-    $account->status = 1;
-    $account = user_save($account);
-
-    $developer_role = user_role_load_by_name('developer');
-    $query = db_insert('users_roles')->fields(array('uid', 'rid'));
-    $query->values(array('uid' => $account->uid, 'rid' => $developer_role->rid));
-    $query->execute();
-  }
-}
-
-/**
- * Add Kevin Reynen as a developer.
- */
-function cu_users_update_7016() {
-  // If kere7580 user does not exist.
-  $new_account = user_load_by_name('kere7580');
-  if (!isset($new_account->uid)) {
-    // Create new user.
-    $account = new stdClass();
-    $account->name = 'kere7580';
-    $account->mail = 'Kevin.Reynen@Colorado.EDU';
-    $account->status = 1;
-    $account = user_save($account);
-
-    $developer_role = user_role_load_by_name('developer');
-    $query = db_insert('users_roles')->fields(array('uid', 'rid'));
-    $query->values(array('uid' => $account->uid, 'rid' => $developer_role->rid));
-    $query->execute();
-  }
-}
-
-/**
- * Add James Fuller as a developer.
- */
-function cu_users_update_7017() {
-  // If jafu6031 user does not exist.
-  $new_account = user_load_by_name('jafu6031');
-  if (!isset($new_account->uid)) {
-    // Create new user.
-    $account = new stdClass();
-    $account->name = 'jafu6031';
-    $account->mail = 'James.W.Fuller@Colorado.EDU';
     $account->status = 1;
     $account = user_save($account);
 
@@ -212,7 +171,7 @@ function cu_users_update_7019() {
 
 /**
  * Add Emily as an administrator.
- */
+ 
 function cu_users_update_7020() {
   // If new user does not exist.
   $new_account = user_load_by_name('mortone');
@@ -230,6 +189,7 @@ function cu_users_update_7020() {
     $query->execute();
   }
 }
+*/
 
 /**
  * Remove Erin Corson and Matt Tucker as a users
@@ -240,27 +200,6 @@ function cu_users_update_7020() {
    $matt = user_load_by_name('matu4291');
    user_cancel(array(), $matt->uid, 'user_cancel_reassign');
  }
-
-/**
- * Add Alex Finnarn as a developer.
- */
-function cu_users_update_7022() {
-  // If alfi2595 user does not exist.
-  $new_account = user_load_by_name('alfi2595');
-  if (!isset($new_account->uid)) {
-    // Create new user.
-    $account = new stdClass();
-    $account->name = 'alfi2595';
-    $account->mail = 'alexander.finnarn@colorado.edu';
-    $account->status = 1;
-    $account = user_save($account);
-
-    $developer_role = user_role_load_by_name('developer');
-    $query = db_insert('users_roles')->fields(array('uid', 'rid'));
-    $query->values(array('uid' => $account->uid, 'rid' => $developer_role->rid));
-    $query->execute();
-  }
-}
 
 /**
  * Add test users for edit-my-content, content-editor and site-owner
@@ -313,26 +252,6 @@ function cu_users_update_7023() {
     $query->values(array('uid' => $account->uid, 'rid' => $site_owner_role->rid));
     $query->execute();
   }
-}
-
-/**
-* Add Owen Morrill as a developer.
-*/
-function cu_users_update_7024() {
- // If owmo7772 user does not exist.
- $account = user_load_by_name('owmo7772');
- if (!isset($account->uid)) {
-   // Create new user.
-   $account = new stdClass();
-   $account->name = 'owmo7772';
-   $account->mail = 'owen.morrill@colorado.edu';
-   $account->status = 1;
-   $account = user_save($account);
- }
- $developer_role = user_role_load_by_name('developer');
- $query = db_insert('users_roles')->fields(array('uid', 'rid'));
- $query->values(array('uid' => $account->uid, 'rid' => $developer_role->rid));
- $query->execute();
 }
 
 /**

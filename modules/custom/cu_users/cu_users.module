@@ -12,33 +12,25 @@
 function cu_users_get_users($type = 'all') {
 
   $user_array['developer'] = array(
-    'crafts' => 'Kevin.Crafts@Colorado.EDU',
-    'sniderc' => 'Catherine.Snider@Colorado.EDU',
-    'kere7580' => 'Kevin.Reynen@Coloardo.EDU',
-    'jafu6031' => 'James.W.Fuller@Colorado.EDU',
-    'alfi2595' => 'alexander.finnarn@colorado.edu',
-    'owmo7772' => 'owen.morrill@colorado.edu',
-    'stalkert' => 'Tim.Stalker@ucdenver.edu'
+    'stalkert' => 'Tim.Stalker@ucdenver.edu',
+    'hendmark' => 'Mark.Hendricks@ucdenver.edu'
   );
 
   $user_array['administrator'] = array(
-    'brokaw' => 'Annie.Brokaw@Colorado.EDU',
-    'leslie' => 'jon.leslie@Colorado.EDU',
-    'linebarg' => 'joanna.bertrand@Colorado.EDU',
-    'wetu1300' => 'wendy.turnbull@Colorado.EDU',
-    'mortone' => 'Emily.Kellagher@Colorado.EDU'
+    'osr-test-admin' => 'osr-test-admin@ucdenver.edu',
   );
 
   $user_array['site_owner'] = array(
-    'osr-test-owner' => 'osr-test-owner@colorado.edu',
+    'osr-test-owner' => 'osr-test-owner@ucdenver.edu',
+    'kohmt' => 'Tracy.Kohm@ucdenver.edu'
   );
 
   $user_array['content_editor'] = array(
-    'osr-test-content' => 'osr-test-content@colorado.edu',
+    'osr-test-content' => 'osr-test-content@ucdenver.edu',
   );
 
   $user_array['edit_my_content'] = array(
-    'osr-test-edit-own' => 'osr-test-edit-own@colorado.edu',
+    'osr-test-edit-own' => 'osr-test-edit-own@ucdenver.edu',
   );
 
   $user_array['all'] = array_merge($user_array['developer'], $user_array['administrator'], $user_array['site_owner'], $user_array['content_editor'], $user_array['edit_my_content']);
