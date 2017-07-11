@@ -264,10 +264,10 @@ function cu_users_update_7025() {
 
 An email invitation has been sent requesting the user to login to [site:url] and accept the invitation. Upon completion, a confirmation email will be sent.
 
-If you did not submit this request or need to modify it, please contact us at websupport@colorado.edu.
+If you did not submit this request or need to modify it, please contact us at clas-web-support@ucdenver.edu.
 
 --
-The Web Express Team
-http://www.colorado.edu/webcentral
-websupport@colorado.edu');
+The CLAS Web Express Team
+http://clas-test.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
 }
