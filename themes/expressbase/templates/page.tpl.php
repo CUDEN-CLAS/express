@@ -24,8 +24,7 @@
     <div id="navigation-wrapper" class="navigation-wrapper">
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
-        <div id="secondary-navigation" class="container-max" style="border-color:#333">
-          <h2 style="margin:20px 0 0 20px; color:#fff; font-size:26px"><?php print $site_name; ?></h2>
+        <div id="secondary-navigation" class="container-max">
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
             <?php print render($page['secondary_menu']); ?>
           </div>

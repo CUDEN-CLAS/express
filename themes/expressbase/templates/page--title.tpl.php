@@ -25,6 +25,7 @@
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">
+        
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
             <?php print render($page['secondary_menu']); ?>
           </div>
