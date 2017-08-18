@@ -262,6 +262,39 @@
         </div>
       </div>
     </div>
+    <div id="Contentplaceholder3_T9F43D663012_Col00" style="width:100%" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
+<div class="t-contentBlock">
+
+    <div><div id="cuicContainer"><img alt="CU in the City logo" id="cuic" src="<?php print $base_url . '/' . drupal_get_path('theme', 'expressbase'); ?>/images/cudenver/cuic4.png" data-displaymode="Original" title="CU in the City"></div></div>    
+
+</div>
+
+</div>
+  
+  <div class="t-contentBlock">
+
+    <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
+<div class="footerContainer" style="margin:auto; max-width:1200px">
+<ul style="list-style:none; margin:0; padding:0" role="list" aria-label="footer navigation">
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about-us/contact/Pages/default.aspx">Contact Us</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/websitefeedback/Pages/form.aspx">Website Feedback</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.cu.edu/">CU System</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/policy/Pages/PrivacyPolicy.aspx">Privacy Policy</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/policy/Pages/LegalNotices.aspx">Legal Notices</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040">Accreditation</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about/departments/HR/jobsoncampus/Pages/index.aspx">Employment</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://giving.cu.edu/fund-search?field_campuses=1100"> Give Now</a></li>
+</ul>
+<div class="clearfix">&nbsp;</div>
+<hr style="margin:7px 0; border-top:1px solid #555">
+<div class="u-foottextwrap">
+<p style="margin-bottom:0; font-size:14px">© 2017&nbsp;<a href="http://www.cu.edu/regents/"><strong> The Regents of the University of Colorado</strong></a>, a body corporate. All rights reserved.</p>
+<p style="margin-bottom:0; font-size:14px"> Accredited by the <a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040"> <strong> Higher Learning Commission</strong></a>. All trademarks are registered property of the University. Used by permission only.</p>
+</div>
+</div>
+</div></div>    
+
+</div>
   </div>
 </div>
 <?php print render($page['bottom']); ?>

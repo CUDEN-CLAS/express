@@ -43,7 +43,7 @@
   </div>
 <?php else: ?>
 
-  <?php if ($logo): ?>
+  <?php if ($logo): ?> 
     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo"><img src="<?php print $svg_logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" id="logo" /></a>
   <?php endif; ?>
 

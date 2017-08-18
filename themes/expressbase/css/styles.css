@@ -1015,3 +1015,137 @@ a.file-pdf { padding: 5px 20px 5px 0; background: transparent url(../images/icon
 
 /* email */
 a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/icon_mailto.gif) no-repeat center right; }
+
+/* CU Denver Styles */
+
+.footerContainer li a {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #ddd;
+}
+
+.footerContainer li a:hover {
+	text-decoration:underline
+}
+
+.u-foottextwrap a {
+   color:#ddd
+}
+
+.u-foottextwrap a:hover {
+   text-decoration:underline
+}
+
+#cuicContainer {
+	position: relative;
+}
+
+#cuic {
+	bottom: -10px;
+	position: absolute;
+	right: 0;
+	width: 400px;	
+}
+
+.ankle {
+	padding: 30px 0 60px;
+}
+
+.ankle {
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+}
+
+.anklecontainer {
+    width: 1200px;
+}
+
+.anklecontainer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.anklecontainer {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.anklecontainer .col-md-3 {
+    width:25%;
+    float:left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ankle h3 {
+    margin-top:0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height:1.1
+}
+
+.ankle ul {
+    float:left
+}
+
+.ankleLinkTitle {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.linkArea ul {
+	padding-left:0;
+	list-style:none;
+	list-style-position:outside;
+	line-height: 1.428571429;
+	color:#fff;
+	margin-bottom:10px;
+	margin-top:0
+	
+	
+}
+
+.linkArea li {
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+.linkArea a {
+	display: block;
+	font-size: 14px;
+	line-height: 1.2em;
+	color:#fff
+}
+
+.linkArea a:hover {
+	text-decoration:underline
+}
+
+.col-md-9 {
+	width: 75%;
+	float:left;
+	position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.t-localFooterLinkCol {
+	float: left;
+	width:25%;
+	position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+	
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}

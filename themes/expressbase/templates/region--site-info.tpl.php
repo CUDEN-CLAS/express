@@ -21,3 +21,70 @@
         <span class="required-links"><a href="http://www.colorado.edu/about/privacy-statement">Privacy</a> &bull; <a href="http://www.colorado.edu/about/legal-trademarks">Legal &amp; Trademarks</a></span></p>
     </div>
   </footer>
+  
+  <div class="ankle t-ankle">
+    <div class="anklecontainer">
+        <div class="col-md-3">
+
+
+
+        </div>
+        <div class="col-md-9">
+            <div class="linkWrapper">
+                <div class="linkArea row">
+                        <div class="col-md-3 t-localFooterLinkCol">
+        
+	 
+    <span class="ankleLinkTitle" aria-labelledby="anklecol_navigation" role="navigation">
+        Test Link group
+    </span>
+    <ul class="list-unstyled">
+                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/denver-theme/dtc3" target="_blank">This is a link to an internal page</a></li>                <li><a href="https://www.reddit.com/r/catpictures/" target="_blank">This is a link to an external page</a></li>                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/dual-campus-theme/ntr3" target="_blank">Another test link to an internal page</a></li>
+    </ul>
+         
+    </div>
+
+                        <div class="col-md-3 t-localFooterLinkCol">
+        
+	 
+    <span class="ankleLinkTitle" aria-labelledby="anklecol_navigation" role="navigation">
+        Test Link group
+    </span>
+    <ul class="list-unstyled">
+                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/denver-theme/dtc3" target="_blank">This is a link to an internal page</a></li>                <li><a href="https://www.reddit.com/r/catpictures/" target="_blank">This is a link to an external page</a></li>                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/dual-campus-theme/ntr3" target="_blank">Another test link to an internal page</a></li>
+    </ul>
+         
+    </div>
+
+                        <div class="col-md-3 t-localFooterLinkCol">
+        
+	 
+    <span class="ankleLinkTitle" aria-labelledby="anklecol_navigation" role="navigation">
+        Test Link group
+    </span>
+    <ul class="list-unstyled">
+                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/denver-theme/dtc3" target="_blank">This is a link to an internal page</a></li>                <li><a href="https://www.reddit.com/r/catpictures/" target="_blank">This is a link to an external page</a></li>                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/dual-campus-theme/ntr3" target="_blank">Another test link to an internal page</a></li>
+    </ul>
+         
+    </div>
+
+                        <div class="col-md-3 t-localFooterLinkCol">
+        
+	 
+    <span class="ankleLinkTitle" aria-labelledby="anklecol_navigation" role="navigation">
+        Test Link group
+    </span>
+    <ul class="list-unstyled">
+                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/denver-theme/dtc3" target="_blank">This is a link to an internal page</a></li>                <li><a href="https://www.reddit.com/r/catpictures/" target="_blank">This is a link to an external page</a></li>                <li><a href="https://wstestdesign.oit.ucdenver.edu/visual-ui-design/original-designs/dual-campus-theme/ntr3" target="_blank">Another test link to an internal page</a></li>
+    </ul>
+         
+    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        </div>
+    <div class="clearfix"> </div>
+</div>
+  
