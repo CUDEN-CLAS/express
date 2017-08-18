@@ -262,16 +262,10 @@
         </div>
       </div>
     </div>
-    <div id="Contentplaceholder3_T9F43D663012_Col00" style="width:100%" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
-<div class="t-contentBlock">
-
-    <div><div id="cuicContainer"><img alt="CU in the City logo" id="cuic" src="<?php print $base_url . '/' . drupal_get_path('theme', 'expressbase'); ?>/images/cudenver/cuic4.png" data-displaymode="Original" title="CU in the City"></div></div>    
-
-</div>
-
-</div>
+    
   
   <div class="t-contentBlock">
+  
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
 <div class="footerContainer" style="margin:auto; max-width:1200px">
