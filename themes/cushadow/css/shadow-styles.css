@@ -66,3 +66,7 @@ body { background: none; background-color: #1e1e1e; background-color: #f2f2f2; b
 #mobile-navigation-wrapper ul#secondary-menu-mobile a { color: #fff; border-bottom: 1px solid #222; }
 #mobile-navigation-wrapper ul#secondary-menu-mobile a.active, #mobile-navigation-wrapper ul#secondary-menu-mobile a.active-trail { color: #fff; background-color: #222; font-weight: 600; border-bottom: 1px solid #222; }
 #mobile-navigation-wrapper ul#secondary-menu-mobile, #mobile-navigation-wrapper ul#footer-menu-mobile { border-top: 3px solid #555; }
+
+/* CU Denver Styles */
+
+#cuic {bottom: -10px !important; position: absolute;	right: 0; width: 400px}

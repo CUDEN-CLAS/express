@@ -232,7 +232,7 @@
     <?php endif; ?>
 
 
-    <div id="footer-section" class='footer-section'>
+    <div id="footer-section" class='footer-section' style="background-color:#222">
       <?php if (!empty($page['footer'])): ?>
         <div id="footer-wrapper" class="section-wrapper footer-wrapper">
           <div id="footer" class="container-max">
@@ -268,8 +268,8 @@
   
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
-<div class="footerContainer" style="margin:auto; max-width:1200px">
-<ul style="list-style:none; margin:0; padding:0" role="list" aria-label="footer navigation">
+<div class="footerContainer" style="margin:auto; max-width:1160px">
+<ul style="list-style:none; margin:0 0 0 0px; padding:0" role="list" aria-label="footer navigation">
     <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about-us/contact/Pages/default.aspx">Contact Us</a></li>
     <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/websitefeedback/Pages/form.aspx">Website Feedback</a></li>
     <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.cu.edu/">CU System</a></li>

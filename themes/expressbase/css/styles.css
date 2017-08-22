@@ -1018,11 +1018,15 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 
 /* CU Denver Styles */
 
+#site-info-wrapper {background-color:#222}
+
+.footerContainer {margin:auto; max-width:1160px}
+
 .footerContainer li a {
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	color: #ddd;
+	font-family: Arial,Helvetica,sans-serif !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	color: #ddd !important;
 }
 
 .footerContainer li a:hover {
@@ -1030,7 +1034,7 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 }
 
 .u-foottextwrap a {
-   color:#ddd
+   color:#ddd !important
 }
 
 .u-foottextwrap a:hover {
@@ -1042,7 +1046,7 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 }
 
 #cuic {
-	bottom: -10px;
+	bottom: -30px;
 	position: absolute;
 	right: 0;
 	width: 400px;	
@@ -1050,6 +1054,7 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 
 .ankle {
 	padding: 30px 0 60px;
+	background-color: #222
 }
 
 .ankle {
