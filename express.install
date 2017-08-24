@@ -179,12 +179,12 @@ function express_update_7003() {
  *
  * Disable cu_core module.
  */
-function express_update_7004() {
+function express_update_7007() {
   // Enable module.
   module_disable(array('cu_core'));
 }
 
-function express_update_7005() {
+function express_update_7008() {
   // Enable module.
   module_enable(array('ucd_core'));
 }
@@ -194,7 +194,7 @@ function express_update_7005() {
  *
  * Enable cu_elysia_cron module.
  */
-function express_update_7006() {
+function express_update_7009() {
   // Enable module.
   module_enable(array('cu_elysia_cron'));
   secure_permissions_rebuild();
