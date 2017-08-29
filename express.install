@@ -179,6 +179,16 @@ function express_update_7003() {
  *
  * Disable cu_core module.
  */
+function express_update_7004() {
+  // Disable module.
+  module_disable(array('rave_alerts'));
+}
+
+function express_update_7005() {
+  // Disable module.
+  module_disable(array('express_status'));
+}
+
 function express_update_7007() {
   // Enable module.
   module_disable(array('cu_core'));
