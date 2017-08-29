@@ -1018,6 +1018,19 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 
 /* CU Denver Styles */
 
+@media all and (min-width: 961px) {
+    #cudenlogo {background-image:url("../images/cudenver/ucdlogo.png"); width:492px; height:50px}
+    .orgname h2 {padding:20px 0 10px 18px; color:#fff; font-size:26px}
+}
+@media all and (max-width: 960px) {
+    #cudenlogo {background-image:url("../images/cudenver/ucdlogo-mobile.png"); width:134px; height:50px}
+    .orgname h2 {padding:20px 0 10px 18px; color:#fff; font-size:21px}
+    
+}
+
+#orgname-wrapper {background-color:#222; border-top:1px solid #333; border-bottom:1px solid #444}
+.orgname {margin-right: auto; margin-left: auto; max-width: 1200px; background-color:#222}
+
 #site-info-wrapper {background-color:#222}
 
 .footerContainer {margin:auto; max-width:1160px}
@@ -1050,6 +1063,10 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 	position: absolute;
 	right: 0;
 	width: 400px;	
+}
+
+@media all and (max-width: 768px) {
+	#cuic {width:300px !important}
 }
 
 .ankle {

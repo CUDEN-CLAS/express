@@ -42,22 +42,5 @@
     <?php endif; ?>
   </div>
 <?php else: ?>
-
-  <?php if ($logo): ?> 
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo"><img src="<?php print $svg_logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" id="logo" /></a>
-  <?php endif; ?>
-
-  <?php if ($site_name || $site_slogan): ?>
-    <div class="header__name-and-slogan" id="name-and-slogan">
-      <?php if ($site_name): ?>
-        <<?php print $site_name_tag; ?> class="header__site-name" id="site-name">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-        </<?php print $site_name_tag; ?>>
-      <?php endif; ?>
-
-      <?php if ($site_slogan): ?>
-        <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
+  <div id="cudenlogo"></div>
 <?php endif; ?>
