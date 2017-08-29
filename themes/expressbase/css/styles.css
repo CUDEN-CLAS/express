@@ -45,7 +45,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .banner-black #header-wrapper .mobile-menu-toggle button { color: #fff; border-color: #fff; }
 .banner-black #header-wrapper a.search-toggle:link, .banner-black #header-wrapper a.search-toggle:visited { color: #fff; }
 
-#header-wrapper { padding: 20px 0; }
+#header-wrapper { padding: 0px 0; }
 
 #branding { position: relative; }
 
@@ -74,7 +74,7 @@ a.custom-logo-link { display: block; padding-right: 35px; }
 @media screen and (min-width: 480px) { a.custom-logo-link { padding-right: 65px; } }
 #cu-footer img { max-width: 300px; width: 100%; height: auto; }
 
-.search-toggle { display: none; padding: 10px; float: right; font-size: 150%; }
+.search-toggle { display: none; padding: 0px 10px 0px 10px; float: right; font-size: 150%; }
 
 @media screen and (min-width: 960px) { .search-toggle { display: inline-block; } }
 img#logo { position: absolute; top: 0; left: 20px; width: 30px; height: auto; }
@@ -102,14 +102,14 @@ h1#site-name, div#site-name { font-size: 18px; margin: 0; padding: 0; line-heigh
   h1#site-name, div#site-name { font-size: 21px; margin: 0; padding: 0; line-height: 110%; }
   .two-line-title h1#site-name, .two-line-title div#site-name { font-size: 18px; }
   #site-slogan { margin: 0px 0 0 0; font-size: 11px; text-transform: uppercase; } }
-@media all and (min-width: 960px) { #header-wrapper { padding: 20px 0; }
+@media all and (min-width: 960px) { #header-wrapper { padding: 0px 0; }
   img#logo { position: absolute; top: 0; left: 20px; width: 65px; height: auto; }
   #name-and-slogan { margin-left: 75px; margin-right: 65px; padding-top: 13px; }
   .two-line-title #name-and-slogan { padding-top: 0; }
   h1#site-name, div#site-name { font-size: 28px; margin: 0; padding: 0; line-height: 110%; }
   .two-line-title h1#site-name, .two-line-title div#site-name { font-size: 25px; }
   #site-slogan { margin: 3px 0 0 0; font-size: 12px; text-transform: uppercase; } }
-.layout-fixed #header-wrapper { padding: 20px 0; }
+.layout-fixed #header-wrapper { padding: 0px 0; }
 .layout-fixed img#logo { position: absolute; top: 0; left: 20px; width: 65px; height: auto; }
 .layout-fixed #name-and-slogan { margin-left: 75px; margin-right: 0; padding-top: 13px; }
 .layout-fixed .two-line-title #name-and-slogan { padding-top: 0; }
