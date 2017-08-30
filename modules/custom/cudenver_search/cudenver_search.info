@@ -1,8 +1,0 @@
-name = "CU Denver - Search"
-description = "Google Custom Search Module"
-package = "CU Denver"
-core = 7.x
-version = 7.x-1.0
-
-scripts[] = js/google_cse.js
-stylesheets[all][] = css/google_cse.css
