@@ -40,12 +40,12 @@ function cu_sitewide_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'google_appliance-ga_block_search_form' => array(
-          'module' => 'google_appliance',
-          'delta' => 'ga_block_search_form',
-          'region' => 'search_box',
-          'weight' => '-10',
-        ),
+        //'google_appliance-ga_block_search_form' => array(
+          //'module' => 'google_appliance',
+          //'delta' => 'ga_block_search_form',
+          //'region' => 'search_box',
+          //'weight' => '-10',
+        //),
         'system-help' => array(
           'module' => 'system',
           'delta' => 'help',

@@ -177,15 +177,27 @@ function express_update_7003() {
 /**
  * Express 2.6.0 update.
  *
- * Disable cu_core module.
+ * Disable rave alerts module.
  */
+function express_update_7004() {
+  // Disable module.
+  module_disable(array('rave_alerts'));
+}
+
+function express_update_7005() {
+  // Disable search and status modules.
+  module_disable(array('express_status'));
+  module_disable(array('cu_search'));
+  module_disable(array('google_appliance'));
+}
+
 function express_update_7007() {
-  // Enable module.
+  // Disable CU Core
   module_disable(array('cu_core'));
 }
 
 function express_update_7008() {
-  // Enable module.
+  // Enable UCD Core module.
   module_enable(array('ucd_core'));
 }
 
