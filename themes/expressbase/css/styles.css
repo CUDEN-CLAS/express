@@ -35,7 +35,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .banner-light #header-wrapper .mobile-menu-toggle button { color: #363636; border-color: #363636; }
 .banner-light #header-wrapper a.search-toggle:link, .banner-light #header-wrapper a.search-toggle:visited { color: #363636; }
 
-.banner-dark #header-wrapper { background: #333; color: #fff; }
+.banner-dark #header-wrapper { background: #000; color: #fff; }
 .banner-dark #header-wrapper a:link, .banner-dark #header-wrapper a:visited, .banner-dark #header-wrapper a:hover { color: #fff; }
 .banner-dark #header-wrapper .mobile-menu-toggle button { color: #fff; border-color: #fff; }
 .banner-dark #header-wrapper a.search-toggle:link, .banner-dark #header-wrapper a.search-toggle:visited { color: #fff; }
@@ -202,7 +202,7 @@ h1#site-name, div#site-name { font-size: 18px; margin: 0; padding: 0; line-heigh
 
 .layout-responsive .mobile-menu-toggle { display: block; position: absolute; top: 3px; right: 20px; text-transform: uppercase; font-size: 18px; font-family: Arial, Helvetica; }
 .layout-responsive .mobile-menu-toggle span.mobile-menu-text { position: absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
-@media screen and (min-width: 480px) { .layout-responsive .mobile-menu-toggle { font-size: 11px; }
+@media screen and (min-width: 300px) { .layout-responsive .mobile-menu-toggle { font-size: 11px; }
   .layout-responsive .mobile-menu-toggle span.mobile-menu-text { position: static !important; clip: auto; }
   .layout-responsive .mobile-menu-toggle button { padding: 2px 5px; display: inline-block; border-width: 1px; border-style: solid; white-space: nowrap; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; } }
 @media screen and (min-width: 960px) { .layout-responsive .mobile-menu-toggle { display: none; } }
@@ -1019,13 +1019,15 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 /* CU Denver Styles */
 
 .search-toggle-link { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
-.search-toggle-quicklinks { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
+.search-toggle-quicklinks { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; border-bottom:3px solid #cfb87c; font-weight:600; color:#ccc }
+.search-toggle-quicklinks:hover {text-decoration:underline}
 .search-toggle-quicklinks-mobile { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
 
 @media screen and (min-width: 960px) { .search-toggle-link { display: inline-block; } }
 @media screen and (min-width: 960px) { .search-toggle-quicklinks { display: inline-block; } }
 
 @media screen and (max-width: 960px) { .search-toggle-quicklinks-mobile { display: block; float:left; } }
+@media screen and (min-width: 480px) { .search-toggle-quicklinks-mobile { display: block; float:left; } }
 
 @media all and (min-width: 961px) {
     #cudenlogo {background-image:url("../images/cudenver/ucdlogo.png"); width:492px; height:50px}
