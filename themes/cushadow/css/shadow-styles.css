@@ -7,7 +7,7 @@ body { background: none; background-color: #1e1e1e; background-color: #f2f2f2; b
 
 .layout-responsive #page { width: auto; max-width: 1200px; margin: 0 auto; }
 
-#secondary-menu-wrapper { background-color: #000; }
+#secondary-menu-wrapper { background-color: #222; }
 
 #main-menu-wrapper { background-color: #444; }
 
@@ -70,3 +70,4 @@ body { background: none; background-color: #1e1e1e; background-color: #f2f2f2; b
 /* CU Denver Styles */
 
 #cuic {bottom: -10px !important; position: absolute;	right: 0; width: 400px}
+#orgname-wrapper {border-bottom:none}

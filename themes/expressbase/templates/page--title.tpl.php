@@ -21,7 +21,7 @@
         <div id="branding" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
-            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button>
+            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="http://www.google.com" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
           </div>
         </div>
         <div id="header-content" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clearfix">
@@ -34,12 +34,14 @@
           }
             if (!empty($options) && !empty($page['search_box'])):
           ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a>
+            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://www.google.com" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.google.com" class="search-toggle-link" style="padding:15px 0px 0px 0px">Test <span style="padding:0px 5px 0px 5px">|</span></a>
           <?php endif; ?>
         </div>
       </header>
     </div>
     <div id="navigation-wrapper" class="navigation-wrapper">
+      <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="http://clas-test.ucdenver.pvt/clas-dev/" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
+      </div>
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">

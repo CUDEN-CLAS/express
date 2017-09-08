@@ -91,3 +91,5 @@ ul#main-menu a#home-link:hover, ul#main-menu a#home-link.active { color: #333; b
 
 #cuic {bottom: -10px; position: absolute;	right: 0; width: 400px}
 .footerContainer {margin:auto}
+
+#quickLinks {width:1200px}

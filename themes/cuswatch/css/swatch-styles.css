@@ -7,7 +7,7 @@ body { background-color: #272727; padding-bottom: 20px; }
 
 .layout-responsive.layout-boxed #page { width: auto; max-width: 1200px; margin: 0 auto 20px; }
 
-#secondary-menu-wrapper { background-color: #000; color: #9b9b9b; }
+#secondary-menu-wrapper { background-color: #222; color: #9b9b9b; }
 #secondary-menu-wrapper nav { background-color: #333; }
 #secondary-menu-wrapper nav h2 { padding-left: 8px; }
 #secondary-menu-wrapper a { display: inline-block; color: #fff; }
@@ -96,3 +96,4 @@ ul#action-menu a { line-height: 20px; margin: 20px 0 20px 10px; }
 /* CU Denver Styles */
 
 #cuic {bottom: -10px; position: absolute;	right: 0; width: 400px}
+#orgname-wrapper {border-bottom:none}
