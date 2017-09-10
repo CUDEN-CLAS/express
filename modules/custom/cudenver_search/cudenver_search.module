@@ -2,7 +2,7 @@
 
 function cudenver_search_init() {
   $settings = array(
-    'id' => variable_get('cudenver_search_engine_id', ''),
+    'id' => variable_get('cudenver_search_engine_id', '018357517236236256036:g2zbfe5wvsy'),
   );
   drupal_add_js(array('cudenver_search' => $settings), 'setting');
 }
@@ -50,7 +50,7 @@ function cudenver_search_block_view($delta = '') {
   switch ($delta) {
     case 'cudenver_search_search':
       global $base_url;
-      $results_page_path = variable_get('cudenver_search_engine_results_page','');
+      $results_page_path = variable_get('cudenver_search_engine_results_page','/search');
       $block['content'] = array(
         '#markup' => '<gcse:searchbox-only queryparametername="q_as" resultsUrl="' . $base_url . $results_page_path . '"></gcse:searchbox-only>',
       );
