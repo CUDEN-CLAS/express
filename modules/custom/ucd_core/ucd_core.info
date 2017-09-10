@@ -19,7 +19,7 @@ dependencies[] = cu_atlas
 dependencies[] = atlas
 dependencies[] = atlas_statistics
 ;dependencies[] = express_status
-dependencies[] = realname
+;dependencies[] = realname
 dependencies[] = elysia_cron
 dependencies[] = cu_elysia_cron
 
