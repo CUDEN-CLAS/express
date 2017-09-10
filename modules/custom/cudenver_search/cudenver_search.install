@@ -5,7 +5,7 @@ function cudenver_search_requirements($phase) {
   $t = get_t();
 
   if ($phase == 'runtime') {
-    $id = trim(variable_get('cudenver_search_engine_id', ''));
+    $id = trim(variable_get('cudenver_search_engine_id', '018357517236236256036:g2zbfe5wvsy'));
 	if (empty($id)) {
       $requirements['cudenver_search'] = array(
         'title' => $t('CU Denver Search - Google Custom Search Engine'),

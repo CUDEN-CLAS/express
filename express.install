@@ -189,7 +189,6 @@ function express_update_7005() {
   module_disable(array('express_status'));
   module_disable(array('cu_search'));
   module_disable(array('google_appliance'));
-  module_disable(array('realname'));
 }
 
 function express_update_7007() {
