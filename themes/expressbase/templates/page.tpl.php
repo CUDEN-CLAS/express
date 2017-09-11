@@ -35,9 +35,9 @@
           }
             if (!empty($options) && !empty($page['search_box'])):
           ?>
-            
+            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
           <?php endif; ?>
-          <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
+          
         </div>
         
       </header>
