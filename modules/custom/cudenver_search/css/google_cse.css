@@ -110,7 +110,7 @@ form.gsc-search-box {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
 }
-
+/* Google Search box styles   
 #___gcse_0 .gsc-search-box .gsc-input>input:hover, #___gcse_0 .gsc-input-box-hover {
     border: none !important;
     border-top-color: rgba(0, 0, 0, 0) !important;
@@ -118,7 +118,7 @@ form.gsc-search-box {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
-
+*/
 #___gcse_0 .gsc-input-box {
     background: #F0F1ED !important;
     border: solid 1px #A9ADA4 !important;
@@ -129,6 +129,20 @@ form.gsc-search-box {
 }
 
 #search input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    background-image: none !important;
+    height: 40px !important;
+    width: 40px !important;
+    margin-left: 5px !important;
+    -webkit-border-radius: 4px 4px !important;
+    -moz-border-radius: 4px 4px !important;
+    border-radius: 4px !important;
+    padding: 5px !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5d6d3', endColorstr='#a8aca3',GradientType=0 ) !important;
+    border: solid 1px #858A7F !important;
+    border-color: #858A7F;
+}
+
+#content input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
     background-image: none !important;
     height: 40px !important;
     width: 40px !important;
@@ -287,6 +301,8 @@ form.gsc-search-box {
 /* Google Custom Search Box on Search Results */
 #search .gsib_a .gsc-input {border: none !important; box-shadow: none !important; transition: none !important;}
 #search td.gsib_a {padding: 0 !important; border: none !important; height:40px !important;}
+#content .gsib_a .gsc-input {border: none !important; box-shadow: none !important; transition: none !important;}
+#content td.gsib_a {padding: 0 !important; border: none !important; height:40px !important;}
 .gsc-search-box td, .gsc-search-box th {border: none !important;}
 .gsc-control-cse td, .gsc-control-cse th {border: none; padding: 0 !important;}
 .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {padding: 0 !important;}
