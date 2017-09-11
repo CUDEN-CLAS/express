@@ -108,7 +108,7 @@
     </div>
     
     <div id="navigation-wrapper" class="navigation-wrapper">
-      <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="http://clas-test.ucdenver.pvt/clas-dev/" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
+      <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="<?php print $front_page; ?>" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
     </div>
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
