@@ -22,7 +22,7 @@
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
           
-            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="http://www.google.com" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
+            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="#quickLinks" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
           </div>
         </div>
         <div id="header-content" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clearfix">
@@ -35,9 +35,9 @@
           }
             if (!empty($options) && !empty($page['search_box'])):
           ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
+            
           <?php endif; ?>
-          
+          <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
         </div>
         
       </header>
