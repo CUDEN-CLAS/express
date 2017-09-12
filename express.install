@@ -186,7 +186,6 @@ function express_update_7004() {
 
 function express_update_7005() {
   // Disable search and status modules.
-  module_disable(array('express_status'));
   module_disable(array('cu_search'));
   module_disable(array('google_appliance'));
 }
