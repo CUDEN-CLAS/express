@@ -118,7 +118,8 @@ dependencies[] = ckeditor_link
 dependencies[] = cu_home_page
 dependencies[] = cu_page
 dependencies[] = cu_alerts
-dependencies[] = cu_search
+;dependencies[] = cu_search
+dependiencies[] = cudenver_search
 dependencies[] = cu_sitewide
 dependencies[] = cu_slider
 dependencies[] = cu_faq
@@ -160,7 +161,8 @@ dependencies[] = video_filter
 ; ============ SEARCH AND ANALYTICS ============
 dependencies[] = cu_googleanalytics
 dependencies[] = googleanalytics
-dependencies[] = google_appliance
+;dependencies[] = google_appliance
+dependencies[] = cudenver_search
 
 ; ============ MENU ============
 dependencies[] = menu_block
