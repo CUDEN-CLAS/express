@@ -89,24 +89,24 @@ function ucd_core_install() {
   $edit_my_content_role = user_role_load_by_name('edit_my_content');
   $authenticated_user_role = user_role_load_by_name('authenticated user');
 
-    variable_set('securepages_enable', '1');
-  variable_set('securepages_pages', 'node/add*
-node/*/edit
-node/*/delete
-user
-user/*
-admin
-admin/*
-sites/default/files/webform/*');
+    //variable_set('securepages_enable', '1');
+  //variable_set('securepages_pages', 'node/add*
+//node/*/edit
+//node/*/delete
+//user
+//user/*
+//admin
+//admin/*
+//sites/default/files/webform/*');
 
-  variable_set('securepages_roles', array($authenticated_user_role->rid => $authenticated_user_role->rid));
-  variable_set('securepages_secure', '1');
-  variable_set('securepages_switch', TRUE);
+  //variable_set('securepages_roles', array($authenticated_user_role->rid => $authenticated_user_role->rid));
+  //variable_set('securepages_secure', '1');
+  //variable_set('securepages_switch', TRUE);
 
-  variable_set('rave_alerts_rss_url', 'http://www.getrave.com/rss/cuboulder/channel1');
-  variable_set('rave_alerts_check_enable', 1);
-  variable_set('rave_alerts_network_fail_message', 'Network Failure: Please go directly to http://alerts.colorado.edu for more information.');
-  variable_set('rave_alerts_deafult_read_more_url', 'http://alerts.colorado.edu');
+  //variable_set('rave_alerts_rss_url', 'http://www.getrave.com/rss/cuboulder/channel1');
+  //variable_set('rave_alerts_check_enable', 1);
+  //variable_set('rave_alerts_network_fail_message', 'Network Failure: Please go directly to http://alerts.colorado.edu for more information.');
+  //variable_set('rave_alerts_deafult_read_more_url', 'http://alerts.colorado.edu');
 
   variable_set('user_external_invite_roles', array(
     $site_owner_role->rid,
@@ -585,15 +585,15 @@ function ucd_core_update_7014() {
  * Core Update 7015 for Express 2.2.8
  * Add webform files to securepages paths.
  */
-function ucd_core_update_7015() {
-  $pages = variable_get(securepages_pages);
+//function ucd_core_update_7015() {
+  //$pages = variable_get(securepages_pages);
   // Need this awkward two line thing to get the var right on the form.
-  $pages = $pages . '
-sites/default/files/webform/*';
-  variable_set('securepages_pages', $pages);
+  //$pages = $pages . '
+//sites/default/files/webform/*';
+  //variable_set('securepages_pages', $pages);
 
-  ucd_core_inventory_update('7015');
-}
+  //ucd_core_inventory_update('7015');
+//}
 
 /**
  * Core Update 7016 for Express 2.2.7.
