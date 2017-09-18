@@ -218,7 +218,7 @@ function express_update_7009() {
  * Deselect ldap requirement for SSL.
  */
 
-function mysite_misc_update_7010() {
-  variable_set('ldap_servers_require_ssl_for_credentials', '0')
+function express_update_7010() {
+  variable_set('ldap_servers_require_ssl_for_credentials', '0');
 }
  
