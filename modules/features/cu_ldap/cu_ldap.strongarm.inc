@@ -61,19 +61,19 @@ function cu_ldap_strongarm() {
   $strongarm->value = '10';
   $export['ldap_servers_encryption'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ldap_servers_require_ssl_for_credentails';
-  $strongarm->value = 1;
-  $export['ldap_servers_require_ssl_for_credentails'] = $strongarm;
+  //$strongarm = new stdClass();
+  //$strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  //$strongarm->api_version = 1;
+  //$strongarm->name = 'ldap_servers_require_ssl_for_credentails';
+  //$strongarm->value = 1;
+  //$export['ldap_servers_require_ssl_for_credentails'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ldap_servers_require_ssl_for_credentials';
-  $strongarm->value = 1;
-  $export['ldap_servers_require_ssl_for_credentials'] = $strongarm;
+  //$strongarm = new stdClass();
+  //$strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  //$strongarm->api_version = 1;
+  //$strongarm->name = 'ldap_servers_require_ssl_for_credentials';
+  //$strongarm->value = 1;
+  //$export['ldap_servers_require_ssl_for_credentials'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
