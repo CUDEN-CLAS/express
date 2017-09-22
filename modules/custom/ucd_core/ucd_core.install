@@ -77,7 +77,7 @@ function ucd_core_install() {
   variable_set('site_name_1', 'University of Colorado Denver');
   variable_set('site_slogan', 'University of Colorado Denver');
 
-  variable_set('express_help_base_url', 'http://clas-test.ucdenver.edu/web-support');
+  variable_set('express_help_base_url', 'http://clas.ucdenver.edu/web-support');
 
 
   // Set message for when enabling of bundles is turned off.
@@ -127,7 +127,7 @@ Upon completion, you will receive an email confirming your access.
 
 --
 The CLAS Web Express Team
-http://clas-test.ucdenver.edu/web-support
+http://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_confirmation_template', 'We have received your request to grant [user_external_invite:invite_role] access to the following:
@@ -140,17 +140,17 @@ If you did not submit this request or need to modify it, please contact us at cl
 
 --
 The CLAS Web Express Team
-http://clas-test.ucdenver.edu/web-support
+http://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_template', 'We are confirming [user_external_invite:invited_email] now has [user_external_invite:invite_role] access to the [site:name], [site:url], website.
 
 Web Support:
-You can use the Web Support website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas-test.ucdenver.edu/web-support
+You can use the Web Support website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas.ucdenver.edu/web-support
 
 --
 The CLAS Web Express Team
-http://clas-test.ucdenver.edu/web-support
+http://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
 
   variable_set('user_external_invite_accepted_confirmation_template', 'You have successfully joined the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
@@ -160,11 +160,11 @@ To access and edit this site:
 2) Login with your University ID and password.
 
 Web Support:
-You can use the Web Support website website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas-test.ucdenver.edu/web-support
+You can use the Web Support website website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. http://clas.ucdenver.edu/web-support
 
 --
 The CLAS Web Express Team
-http://clas-test.ucdenver.edu/web-support
+http://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
 
   // Set the syslog_identity variable to the SID.
@@ -235,7 +235,7 @@ The block System help was assigned to the invalid region help and has been disab
  */
 function ucd_core_update_7001() {
 
-  variable_set('express_help_base_url', 'https://clas-test.ucdenver.edu/web-support');
+  variable_set('express_help_base_url', 'https://clas.ucdenver.edu/web-support');
 
   variable_set('profile_module_manager_ignore', 'secure_permissions, express_permissions, cu_users, ucd_core, cu_help, cu_inventory, cu_inventory_stats, express_final');
 
@@ -565,19 +565,19 @@ function ucd_core_update_7013() {
  * Enable rave_alters module.
  * Revert unprotected Features.
  */
-function ucd_core_update_7014() {
+//function ucd_core_update_7014() {
 
-  module_enable(array('rave_alerts'));
+  //module_enable(array('rave_alerts'));
 
-  variable_set('rave_alerts_rss_url', 'http://www.getrave.com/rss/cuboulder/channel1');
-  variable_set('rave_alerts_deafult_read_more_url', 'http://alerts.colorado.edu');
-  variable_set('rave_alerts_check_enable', 0);
-  variable_set('rave_alerts_network_fail_message', 'Network Failure: Please go directly to http://alerts.colorado.edu for more information.');
+  //variable_set('rave_alerts_rss_url', 'http://www.getrave.com/rss/cuboulder/channel1');
+  //variable_set('rave_alerts_deafult_read_more_url', 'http://alerts.colorado.edu');
+  //variable_set('rave_alerts_check_enable', 0);
+  //variable_set('rave_alerts_network_fail_message', 'Network Failure: Please go directly to http://alerts.colorado.edu for more information.');
 
-  ucd_core_revert_features();
+  //ucd_core_revert_features();
 
-  ucd_core_inventory_update('7014');
-}
+  //ucd_core_inventory_update('7014');
+//}
 
 
 
@@ -602,7 +602,7 @@ function ucd_core_update_7014() {
  * Enable cu_block_theme, blank out block_styles.
  * Disable, uninstall grid_size_blocks module, delete related variables.
  */
-function ucd_core_update_7016() {
+function ucd_core_update_7014() {
   module_enable(array('cu_block_theme'));
 
   if (module_exists('block_styles')) {
@@ -623,7 +623,7 @@ function ucd_core_update_7016() {
  *
  * Hide cu_newsletter from most users.
  */
-function ucd_core_update_7017() {
+function ucd_core_update_7015() {
   // Set SEO bundle to be hidden in bundle list form.
   variable_set('profile_module_manager_bundle_ignore', array('cu_newsletter_bundle' => 'cu_newsletter_bundle'));
 
@@ -637,7 +637,7 @@ function ucd_core_update_7017() {
  *
  * Add to disabled messages array to hide message displayed to user after enabling newsletter bundle.
  */
-function ucd_core_update_7018() {
+function ucd_core_update_7016() {
 
   // It looks like the original string of messages was truncated to one line so
   // I am adding all disabled messages once again in addition to new message.
@@ -659,7 +659,7 @@ The block System help was assigned to the invalid region help and has been disab
  *
  * Disable old inventory modules and enable Atlas modules.
  */
-function ucd_core_update_7019() {
+function ucd_core_update_7017() {
 
   if (module_exists('cu_inventory_stats')) {
     module_disable(array('cu_inventory_stats'));
@@ -681,7 +681,7 @@ function ucd_core_update_7019() {
  *
  * Revert cu_block_theme feature.
  */
-function ucd_core_update_7021() {
+function ucd_core_update_7018() {
   ucd_core_revert_features(array('cu_block_theme' => 'cu_block_theme'));
 }
 
@@ -690,21 +690,21 @@ function ucd_core_update_7021() {
  *
  * Rebuild perms for varnish button.
  */
-function ucd_core_update_7022() {
+function ucd_core_update_7019() {
   secure_permissions_rebuild();
 }
 
 /**
  * Enable cu_profile_module_manager module
  */
-function ucd_core_update_7023() {
+function ucd_core_update_7020() {
   module_enable(array('cu_profile_module_manager'));
 }
 
 /**
  * Revert Features.
  */
-function ucd_core_update_7024() {
+function ucd_core_update_7021() {
   ucd_core_revert_features();
 }
 
@@ -713,7 +713,7 @@ function ucd_core_update_7024() {
  *
  * Revert All Features.
  */
-function ucd_core_update_7025() {
+function ucd_core_update_7022() {
   ucd_core_revert_features();
 }
 
@@ -722,7 +722,7 @@ function ucd_core_update_7025() {
  *
  * Revert LDAP Feature.
  */
-function ucd_core_update_7026() {
+function ucd_core_update_7023() {
   ucd_core_revert_features(array('cu_ldap' => 'cu_ldap'));
 }
 
@@ -731,7 +731,7 @@ function ucd_core_update_7026() {
  *
  * Revert LDAP Feature.
  */
-function ucd_core_update_7027() {
+function ucd_core_update_7024() {
   ucd_core_revert_features(array('cu_ldap' => 'cu_ldap'));
 }
 
@@ -740,7 +740,7 @@ function ucd_core_update_7027() {
  *
  * Revert LDAP Feature.
  */
-function ucd_core_update_7028() {
+function ucd_core_update_7025() {
   ucd_core_revert_features(array('cu_ldap' => 'cu_ldap'));
 }
 
@@ -749,7 +749,7 @@ function ucd_core_update_7028() {
  *
  * Enable Realname. Revert LDAP and People Administration Override Features.
  */
-function ucd_core_update_7029() {
+function ucd_core_update_7026() {
   module_enable(array('realname'));
   ucd_core_revert_features(array('cu_ldap' => 'cu_ldap', 'cu_people_administration_override' => 'cu_people_administration_override'));
   ucd_core_scramble_admin();
@@ -760,7 +760,7 @@ function ucd_core_update_7029() {
  *
  * Attempt to set Realname for all users in authoring roles.
  */
-function ucd_core_update_7030() {
+function ucd_core_update_7027() {
 
   $roles = array('content_editor', 'site_owner', 'edit_my_content');
   $query = db_select('users_roles', 'ur');
@@ -794,7 +794,7 @@ function ucd_core_update_7030() {
  * Disable cu_block_theme, blocktheme.
  * Revert All Features.
  */
-function ucd_core_update_7031() {
+function ucd_core_update_7028() {
   module_enable(array(
     'express_block_designer',
     'cu_expandable'
