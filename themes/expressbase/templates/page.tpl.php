@@ -339,7 +339,7 @@
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
 <div class="footerContainer" style="margin:auto; max-width:1160px">
-<ul style="list-style:none; margin:0 0 0 0px; padding:0" role="list" aria-label="footer navigation">
+<ul style="list-style:none; margin:0 0 0 0px; padding:0" aria-label="footer navigation">
     <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about-us/contact/Pages/default.aspx">Contact Us</a></li>
     <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/websitefeedback/Pages/form.aspx">Website Feedback</a></li>
     <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.cu.edu/">CU System</a></li>
