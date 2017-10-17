@@ -18,13 +18,13 @@
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
       <header class="header container-max clearfix" id="header" role="banner">
-        <div id="branding" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div id="branding" class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
             <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="http://www.google.com" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
           </div>
         </div>
-        <div id="header-content" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clearfix">
+        <div id="header-content" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clearfix">
           <?php
           $options = variable_get('cu_search_options', array('this' => 'this'));
           foreach ($options as $key => $option) {
@@ -228,7 +228,7 @@
     <div id="footer-section" class="footer-section">
       <?php if (!empty($page['footer'])): ?>
         <div id="footer-wrapper" class="section-wrapper footer-wrapper">
-          <div id="footer" class="container-max">
+          <div id="footer" class="footer container-max">
             <div class="col-lg-12 col-md-12">
               <div class="row">
                 <?php print render($page['footer']); ?>

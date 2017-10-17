@@ -21,11 +21,11 @@
         <div id="branding" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-left:3px">
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
-          
+
             <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="#quickLinks" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
           </div>
         </div>
-        <div id="header-content" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clearfix">
+        <div id="header-content" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clearfix">
           <?php
           $options = variable_get('cu_search_options', array('this' => 'this'));
           foreach ($options as $key => $option) {
@@ -37,12 +37,12 @@
           ?>
             <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
           <?php endif; ?>
-          
+
         </div>
-        
+
       </header>
       <div class="clearfix"></div>
-    <div class="u-mask"> 
+    <div class="u-mask">
 
 <div class="t-contentBlock u-mask">
 
@@ -101,12 +101,12 @@
 </div>
 </div>
 </div>
-<!--maintain sperately--></div> <div class="clearfix"></div>   
+<!--maintain sperately--></div> <div class="clearfix"></div>
 
 </div>
  </div>
     </div>
-    
+
     <div id="navigation-wrapper" class="navigation-wrapper">
       <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="<?php print $front_page; ?>" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
     </div>
@@ -305,7 +305,7 @@
     <div id="footer-section" class='footer-section' style="background-color:#222">
       <?php if (!empty($page['footer'])): ?>
         <div id="footer-wrapper" class="section-wrapper footer-wrapper">
-          <div id="footer" class="container-max">
+          <div id="footer" class="footer container-max">
             <div class="col-lg-12 col-md-12">
               <div class="row">
                 <?php print render($page['footer']); ?>
@@ -332,10 +332,10 @@
         </div>
       </div>
     </div>
-    
-  
+
+
   <div class="t-contentBlock">
-  
+
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
 <div class="footerContainer" style="margin:auto; max-width:1160px">
@@ -356,7 +356,7 @@
 <p style="margin-bottom:0; font-size:14px"> Accredited by the <a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040"> <strong> Higher Learning Commission</strong></a>. All trademarks are registered property of the University. Used by permission only.</p>
 </div>
 </div>
-</div></div>    
+</div></div>
 
 </div>
   </div>
