@@ -211,24 +211,4 @@ function express_update_7009() {
   module_enable(array('cu_elysia_cron'));
   secure_permissions_rebuild();
 }
-
-/**
- * Express 2.6.0 update.
- *
- * Deselect ldap SSL check.
- */
-
-function express_update_7010() {
-  variable_set('ldap_servers_require_ssl_for_credentials', '0');
-}
-
-/**
- * Express 2.6.0 update.
- *
- * Disable securepages
- */
-
-function express_update_7011() {
-  module_disable(array('securepages'));
-}
  
