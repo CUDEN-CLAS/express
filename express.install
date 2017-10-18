@@ -204,11 +204,17 @@ function express_update_7008() {
 /**
  * Express 2.6.0 update.
  *
- * Enable cu_elysia_cron module.
+ * Enable cu_elysia_cron module. Re-enable cu_search, google_appliance
  */
 function express_update_7009() {
   // Enable module.
   module_enable(array('cu_elysia_cron'));
   secure_permissions_rebuild();
+}
+
+function express_update_7010() {
+  // Disable search and status modules.
+  module_enable(array('cu_search'));
+  module_enable(array('google_appliance'));
 }
  
