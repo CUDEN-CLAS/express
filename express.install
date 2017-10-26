@@ -204,7 +204,7 @@ function express_update_7008() {
 /**
  * Express 2.6.0 update.
  *
- * Enable cu_elysia_cron module.
+ * Enable cu_elysia_cron module. Re-enable cu_search, google_appliance
  */
 function express_update_7009() {
   // Enable module.
@@ -212,23 +212,9 @@ function express_update_7009() {
   secure_permissions_rebuild();
 }
 
-/**
- * Express 2.6.0 update.
- *
- * Deselect ldap SSL check.
- */
-
 function express_update_7010() {
-  variable_set('ldap_servers_require_ssl_for_credentials', '0');
-}
-
-/**
- * Express 2.6.0 update.
- *
- * Disable securepages
- */
-
-function express_update_7011() {
-  module_disable(array('securepages'));
+  // Disable search and status modules.
+  module_enable(array('cu_search'));
+  module_enable(array('google_appliance'));
 }
  

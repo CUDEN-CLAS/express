@@ -79,6 +79,7 @@ dependencies[] = auto_entitylabel
 dependencies[] = navbar
 dependencies[] = module_filter
 dependencies[] = responsive_preview
+dependencies[] = diff
 
 ; Site Structure
 dependencies[] = cu_site_info
@@ -117,8 +118,7 @@ dependencies[] = ckeditor_link
 dependencies[] = cu_home_page
 dependencies[] = cu_page
 dependencies[] = cu_alerts
-;dependencies[] = cu_search
-dependiencies[] = cudenver_search
+dependencies[] = cu_search
 dependencies[] = cu_sitewide
 dependencies[] = cu_sitewide_required
 dependencies[] = cu_slider
