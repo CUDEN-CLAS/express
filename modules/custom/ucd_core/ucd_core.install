@@ -854,12 +854,16 @@ function ucd_core_update_7032() {
 /**
  * Express 2.7.0 Update.
  *
- * enable google_cse.
+ * enable google_cse disable cudenver_search.
  */
  function ucd_core_update_7033() {
   module_enable(array(
     'google_cse',
   ));
+  if (module_exists('cudenver_search')) {
+    module_disable(array('cudenver_search'));
+    drupal_uninstall_modules(array('cudenver_search'));
+  }
 }
 
 /**
