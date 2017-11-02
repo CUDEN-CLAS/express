@@ -868,6 +868,66 @@ function ucd_core_update_7032() {
 }
 
 /**
+ * Express 2.7.0 Update.
+ *
+ * Resetting e-mail templates.
+ */
+function ucd_core_update_7034() {
+  variable_set('user_external_invite_invite_template', '[user_external_invite:invite_custom]
+
+You have been invited to join the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
+
+To accept this invitation:
+1) Go to [user_external_invite:invite_link]
+2) Login with your University ID and password.
+
+Upon completion, you will receive an email confirming your access.
+
+--
+The CLAS Web Express Team
+https://clas.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
+
+  variable_set('user_external_invite_confirmation_template', 'We have received your request to grant [user_external_invite:invite_role] access to the following:
+
+[user_external_invite:invited_emails]
+
+An email invitation has been sent requesting the user to login and accept the invitation. Upon completion, a confirmation email will be sent.
+
+If you did not submit this request or need to modify it, please contact us at clas-web-support@ucdenver.edu.
+
+--
+The CLAS Web Express Team
+https://clas.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
+
+  variable_set('user_external_invite_accepted_template', 'We are confirming [user_external_invite:invited_email] now has [user_external_invite:invite_role] access to the [site:name], [site:url], website.
+
+Web Support:
+You can use the Web Support website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. https://clas.ucdenver.edu/web-support
+
+--
+The CLAS Web Express Team
+https://clas.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
+
+  variable_set('user_external_invite_accepted_confirmation_template', 'You have successfully joined the [site:name] Web Express website as an editor with [user_external_invite:invite_role] access privileges.
+
+To access and edit this site:
+1) Go to [site:login-url]
+2) Login with your University ID and password.
+
+Web Support:
+You can use the Web Support website website as your main resource for step-by-step tutorials, information on training sessions, and requesting help. https://clas.ucdenver.edu/web-support
+
+--
+The CLAS Web Express Team
+https://clas.ucdenver.edu/web-support
+clas-web-support@ucdenver.edu');
+
+}
+
+/**
  * Revert features by passing features in an array.
  */
 function ucd_core_revert_features($features = NULL) {
