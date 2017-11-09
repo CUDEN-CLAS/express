@@ -215,5 +215,16 @@ function express_update_7009() {
 function express_update_7010() {
   // Disable search and status modules.
   module_enable(array('cu_search'));
+  module_enable(array('google_appliance'));
+}
+
+/**
+ * Express 2.7.0 update.
+ *
+ * Disable google_appliance
+ */
+function express_update_7011() {
+  // Disable search and status modules.
+  module_disable(array('google_appliance'));
 }
  
