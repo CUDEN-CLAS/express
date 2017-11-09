@@ -215,6 +215,5 @@ function express_update_7009() {
 function express_update_7010() {
   // Disable search and status modules.
   module_enable(array('cu_search'));
-  module_enable(array('google_appliance'));
 }
  
