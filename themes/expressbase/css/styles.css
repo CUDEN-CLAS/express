@@ -1020,8 +1020,9 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 
 /* CU Denver Styles */
 
-.search-toggle-link { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
-.search-toggle-quicklinks { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; border-bottom:3px solid #cfb87c; font-weight:600; color:#ccc }
+#header-content {width:41.3333333%; text-align:right}
+.search-toggle-link { display: none; padding: 15px 0px 0px 0px; font-size: 85%; }
+.search-toggle-quicklinks { display: none; padding: 15px 0px 0px 0px; font-size: 85%; border-bottom:3px solid #cfb87c; font-weight:600; color:#ccc }
 .search-toggle-quicklinks:hover {text-decoration:underline}
 .search-toggle-link:hover {text-decoration:underline}
 .search-toggle-quicklinks-mobile { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
