@@ -18,7 +18,7 @@
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
       <header class="header container-max clearfix" id="header" role="banner">
-        <div id="branding" class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding-left:3px">
+        <div id="branding" class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-left:3px">
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
 
@@ -35,7 +35,7 @@
           }
             if (!empty($options) && !empty($page['search_box'])):
           ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="#quickLinks" class="search-toggle-quicklinks" style="padding:15px 0px 0px 0px">Quick Links</a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link" style="padding:15px 0px 0px 0px">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link" style="padding:15px 0px 0px 0px">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link" style="padding:15px 0px 0px 0px">Webmail <span style="padding:0px 5px 0px 5px">|</span></a>
+            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link">Webmail <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="#quickLinks" class="search-toggle-quicklinks">Quick Links</a>
           <?php endif; ?>
 
         </div>
@@ -82,7 +82,7 @@
     <li><a href="http://www.ucdenver.edu/academics/colleges/SchoolOfEducation/">School of Education and Human Development</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/Engineering/">College of Engineering and Applied Science</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/Graduate-School/">Graduate School</a></li>
-    <li><a href="http://www.ucdenver.edu/academics/colleges/CLAS/">College of Liberal Arts and Sciences</a></li>
+    <li><a href="https://clas.ucdenver.edu">College of Liberal Arts and Sciences</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/SPA/">School of Public Affairs</a></li>
 </ul>
 </div>
