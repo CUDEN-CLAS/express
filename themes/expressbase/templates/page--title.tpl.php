@@ -18,10 +18,10 @@
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
       <header class="header container-max clearfix" id="header" role="banner">
-        <div id="branding" class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div id="branding" class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
           <?php print render($page['branding']); ?>
           <div class="mobile-menu-toggle">
-            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button>
+            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="http://www.google.com" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
           </div>
         </div>
         <div id="header-content" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clearfix">
@@ -34,15 +34,18 @@
           }
             if (!empty($options) && !empty($page['search_box'])):
           ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a>
+            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link">Webmail <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="#quickLinks" class="search-toggle-quicklinks">Quick Links</a>
           <?php endif; ?>
         </div>
       </header>
     </div>
     <div id="navigation-wrapper" class="navigation-wrapper">
+      <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="http://clas-test.ucdenver.pvt/clas-dev/" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
+      </div>
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">
+        
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
             <?php print render($page['secondary_menu']); ?>
           </div>
@@ -252,6 +255,32 @@
         </div>
       </div>
     </div>
+    <div class="t-contentBlock">
+  
+
+    <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
+<div class="footerContainer" style="margin:auto; max-width:1160px">
+<ul style="list-style:none; margin:0 0 0 0px; padding:0" role="list" aria-label="footer navigation">
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about-us/contact/Pages/default.aspx">Contact Us</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/websitefeedback/Pages/form.aspx">Website Feedback</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.cu.edu/">CU System</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/policy/Pages/PrivacyPolicy.aspx">Privacy Policy</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/policy/Pages/LegalNotices.aspx">Legal Notices</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040">Accreditation</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="http://www.ucdenver.edu/about/departments/HR/jobsoncampus/Pages/index.aspx">Employment</a></li>
+    <li style="float:left; margin:0 26px" role="listitem"><a href="https://giving.cu.edu/fund-search?field_campuses=1100"> Give Now</a></li>
+</ul>
+<div class="clearfix">&nbsp;</div>
+<hr style="margin:7px 0; border-top:1px solid #555">
+<div class="u-foottextwrap">
+<p style="margin-bottom:0; font-size:14px">© 2017&nbsp;<a href="http://www.cu.edu/regents/"><strong> The Regents of the University of Colorado</strong></a>, a body corporate. All rights reserved.</p>
+<p style="margin-bottom:0; font-size:14px"> Accredited by the <a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040"> <strong> Higher Learning Commission</strong></a>. All trademarks are registered property of the University. Used by permission only.</p>
+</div>
+</div>
+</div></div>    
+
+</div>
+    
   </div>
 </div>
 <?php print render($page['bottom']); ?>

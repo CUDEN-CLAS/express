@@ -8,6 +8,6 @@
 /**
  * Install express_status module.
  */
-function express_dashboard_user_update_7001() {
-  module_enable(array('express_status'));
-}
+//function express_dashboard_user_update_7001() {
+  //module_enable(array('express_status'));
+//}

@@ -36,6 +36,16 @@
       $('#search').slideToggle('fast').focus();
       $('.express-search-box-small').addClass('fadeIn');
     });
+    $('a.search-toggle-quicklinks').click(function(event){
+      event.preventDefault();
+      $('#quickLinks').slideToggle('fast').focus();
+      $('.container').addClass('fadeIn');
+    });
+    $('a.search-toggle-quicklinks-mobile').click(function(event){
+      event.preventDefault();
+      $('#quickLinks').slideToggle('fast').focus();
+      $('.container').addClass('fadeIn');
+    });
   });
   $(window).on('resize', function(){
       var win = $(this);

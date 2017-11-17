@@ -9,7 +9,7 @@ function cu_search_settings_form($form, &$form_state) {
   $form['cu_search_options'] = array(
     '#type' => 'checkboxes',
     '#options' => array(
-      'all' => 'Colorado.edu',
+      'all' => 'Ucdenver.edu',
     ),
     '#default_value' => variable_get('cu_search_options', array('all')),
   );

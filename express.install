@@ -177,10 +177,54 @@ function express_update_7003() {
 /**
  * Express 2.6.0 update.
  *
- * Enable cu_elysia_cron module.
+ * Disable rave alerts module.
  */
 function express_update_7004() {
+  // Disable module.
+  module_disable(array('rave_alerts'));
+}
+
+function express_update_7005() {
+  // Disable search and status modules.
+  module_disable(array('express_status'));
+  module_disable(array('cu_search'));
+  module_disable(array('google_appliance'));
+}
+
+function express_update_7007() {
+  // Disable CU Core
+  module_disable(array('cu_core'));
+}
+
+function express_update_7008() {
+  // Enable UCD Core module.
+  module_enable(array('ucd_core'));
+}
+
+/**
+ * Express 2.6.0 update.
+ *
+ * Enable cu_elysia_cron module. Re-enable cu_search, google_appliance
+ */
+function express_update_7009() {
   // Enable module.
   module_enable(array('cu_elysia_cron'));
   secure_permissions_rebuild();
 }
+
+function express_update_7010() {
+  // Disable search and status modules.
+  module_enable(array('cu_search'));
+  module_enable(array('google_appliance'));
+}
+
+/**
+ * Express 2.7.0 update.
+ *
+ * Disable google_appliance
+ */
+function express_update_7011() {
+  // Disable search and status modules.
+  module_disable(array('google_appliance'));
+}
+ 

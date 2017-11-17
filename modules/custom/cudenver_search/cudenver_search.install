@@ -1,0 +1,30 @@
+<?php
+
+function cudenver_search_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  if ($phase == 'runtime') {
+    $id = trim(variable_get('cudenver_search_engine_id', '018357517236236256036:g2zbfe5wvsy'));
+	if (empty($id)) {
+      $requirements['cudenver_search'] = array(
+        'title' => $t('CU Denver Search - Google Custom Search Engine'),
+        'value' => $t('The engine&rsquo;s unique ID is not set.'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+	} else {
+      $requirements['cudenver_search'] = array(
+        'title' => $t('CU Denver Search - Google Custom Search Engine'),
+        'value' => $t("The engine&rsquo;s unique ID is set to @id", array('@id' => $id)),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+  }
+
+  return $requirements;
+}
+
+function cudenver_search_uninstall() {
+  variable_del('cudenver_search_engine_id');
+  variable_del('cudenver_search_engine_results_page');
+}

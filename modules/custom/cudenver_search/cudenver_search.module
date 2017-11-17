@@ -1,0 +1,60 @@
+<?php
+
+function cudenver_search_init() {
+  $settings = array(
+    'id' => variable_get('cudenver_search_engine_id', '018357517236236256036:g2zbfe5wvsy'),
+  );
+  drupal_add_js(array('cudenver_search' => $settings), 'setting');
+}
+
+function cudenver_search_menu() {
+  $items = array();
+
+  $items['search'] = array(
+    'title'           => 'Search',
+	'page callback'   => 'cudenver_search_search_page',
+	'access callback' => TRUE,
+  );
+
+  $items['admin/config/search/cudenver_search'] = array(
+    'title' => 'CU Denver Search',
+    'type' => MENU_NORMAL_ITEM,
+    'description' => 'Administer Google Custom Search Engine',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cudenver_search_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'cudenver_search.admin.inc',
+  );
+
+  return $items;
+}
+
+function cudenver_search_search_page() {
+  $output = '<gcse:search linktarget="_parent" queryparametername="q_as"></gcse:search>';
+  return $output;
+}
+
+function cudenver_search_block_info() {
+  $blocks['cudenver_search_search'] = array(
+    'info' => t('Search box'),
+	'status' => TRUE,
+	'region' => 'search_box',
+	'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+	'pages' => 'search',
+  );
+
+  return $blocks;
+}
+
+function cudenver_search_block_view($delta = '') {
+  switch ($delta) {
+    case 'cudenver_search_search':
+      global $base_url;
+      $results_page_path = variable_get('cudenver_search_engine_results_page','/search');
+      $block['content'] = array(
+        '#markup' => '<gcse:searchbox-only queryparametername="q_as" resultsUrl="' . $base_url . $results_page_path . '"></gcse:searchbox-only>',
+      );
+    break;
+  }
+  return $block;
+}

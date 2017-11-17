@@ -66,9 +66,9 @@ function express_dashboard_user_content() {
   }
 
   // Add status.
-  $express_status = module_invoke('express_status', 'block_view', 'express_status');
-  $output['right']['widgets']['status']['title'] = 'System Status';
-  $output['right']['widgets']['status']['content']['#markup'] = $express_status['content'];
+  //$express_status = module_invoke('express_status', 'block_view', 'express_status');
+  //$output['right']['widgets']['status']['title'] = 'System Status';
+  //$output['right']['widgets']['status']['content']['#markup'] = $express_status['content'];
 
   // Add who's online block content to user tab of dashboard.
   $users_online = module_invoke('user', 'block_view', 'online');

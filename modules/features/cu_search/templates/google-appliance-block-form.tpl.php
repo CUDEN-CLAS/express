@@ -24,13 +24,13 @@
    'value' => 'This site',
    'placeholder' => 'Search this site',
    'label' => 'This site',
-   'action' => base_path() . '/gsearch',
+   'action' => base_path() . '/search',
  );
  $configs['all'] = array(
-   'value' => 'Colorado.edu',
-   'placeholder' => 'Search Colorado.edu',
-   'label' => 'Colorado.edu',
-   'action' => 'http://www.colorado.edu/gsearch',
+   'value' => 'Ucdenver.edu',
+   'placeholder' => 'Search Ucdenver.edu',
+   'label' => 'Ucdenver.edu',
+   'action' => 'http://clas-test.ucdenver.pvt/search',
  );
 ?>
 <?php if (!empty($options)): ?>

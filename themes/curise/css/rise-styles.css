@@ -1,13 +1,13 @@
-body { background-color: #1e1e1e; }
+body { background-color: #000; }
 
 #backstretch { display: none; }
 
 #page { position: relative; }
 
-.banner-dark #secondary-menu-wrapper { background-color: #333; color: #fff; }
+.banner-dark #secondary-menu-wrapper { background-color: #222; color: #fff; }
 .banner-dark #secondary-menu-wrapper a { color: #fff; }
 .banner-dark #secondary-menu-wrapper a:hover, .banner-dark #secondary-menu-wrapper a.active, .banner-dark #secondary-menu-wrapper a.active-trail { color: #cfb87c; }
-.banner-dark #main-menu-wrapper { background-color: #333; position: static; }
+.banner-dark #main-menu-wrapper { background-color: #222; position: static; }
 .banner-dark #main-menu-wrapper a { color: #333; font-weight: 600; }
 .banner-dark #main-menu-wrapper a:hover, .banner-dark #main-menu-wrapper a.active, .banner-dark #main-menu-wrapper a.active-trail { background-color: #cfb87c; color: #000; }
 .banner-dark #main-menu-wrapper a#home-link.active { background: transparent; color: #333; }
@@ -134,3 +134,8 @@ body { background-color: #1e1e1e; }
 .layout-feature #content-wrapper { padding-bottom: 0; }
 .layout-feature #main { margin-bottom: 0; padding: 20px 0 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 .layout-feature .top-content { padding-bottom: 20px; }
+
+/* CU Denver Styles */
+
+#cuic {bottom: -10px; position: absolute;	right: 0; width: 400px}
+#orgname-wrapper {border-bottom:none}
