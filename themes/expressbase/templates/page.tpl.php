@@ -82,7 +82,7 @@
     <li><a href="http://www.ucdenver.edu/academics/colleges/SchoolOfEducation/">School of Education and Human Development</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/Engineering/">College of Engineering and Applied Science</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/Graduate-School/">Graduate School</a></li>
-    <li><a href="http://www.ucdenver.edu/academics/colleges/CLAS/">College of Liberal Arts and Sciences</a></li>
+    <li><a href="https://clas.ucdenver.edu">College of Liberal Arts and Sciences</a></li>
     <li><a href="http://www.ucdenver.edu/academics/colleges/SPA/">School of Public Affairs</a></li>
 </ul>
 </div>
