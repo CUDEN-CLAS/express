@@ -11,6 +11,26 @@ function ucd_core_enable() {
  * Implements hook_install().
  */
 function ucd_core_install() {
+	
+  $hosting = express_check_known_hosts();
+
+  if ($hosting == 'travis') {
+    module_enable(array('travis_hosting'));
+  }
+
+  if ($hosting == 'pantheon') {
+    module_enable(array('pantheon_hosting'));
+  }
+  
+  if ($hosting == 'cuden') {
+    module_enable(array('cuden_hosting'));
+  }
+
+  // @TODO: If it's not Travis or Pantheon, assume it's NG for now.
+  // Eventually update to deal with ng (2.0) vs. 3.0
+  if ($hosting == FALSE) {
+    module_enable(array('ng_hosting'));
+  }	
 
   theme_enable(array(
     'cuhighlight',
@@ -925,6 +945,30 @@ The CLAS Web Express Team
 https://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
 
+}
+
+function ucd_core_update_7035() {
+  module_enable(array(
+    'express_user_lock',
+    'cu_unused_beans'
+  ));
+  module_disable(array('google_appliance'));
+  drupal_uninstall_modules($module_list = array('google_appliance'), $uninstall_dependents = FALSE);
+  ucd_core_revert_features();
+}
+
+/**
+ * Express 2.8.2 Update. Add helpscout beacon and XMLSite Map.
+ */
+function ucd_core_update_7036() {
+  module_enable(array(
+    'cu_helpscout',
+    'xmlsitemap',
+    'xmlsitemap_node',
+    'xmlsitemap_menu'
+  ));
+  drupal_uninstall_modules($module_list = array('cu_events_calendar_block'), $uninstall_dependents = FALSE);
+  ucd_core_revert_features();
 }
 
 /**
