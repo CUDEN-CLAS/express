@@ -632,9 +632,9 @@ function ucd_core_update_7013() {
  * Core Update 7015 for Express 2.2.8
  * Add webform files to securepages paths.
  */
-function ucd_core_update_7015() {
+//function ucd_core_update_7015() {
   // Empty Update hook because we no longer use securepages.
-}
+//}
 
 /**
  * Core Update 7016 for Express 2.2.7.
@@ -670,7 +670,7 @@ function ucd_core_update_7015() {
 
   ucd_core_revert_features();
 
-  ucd_core_inventory_update('7017');
+  ucd_core_inventory_update('7015');
 }
 
 /**
