@@ -26,7 +26,7 @@ function ucd_core_install() {
     module_enable(array('ng_hosting'));
   }
 
-  // @TODO: If it's not Travis or Pantheon, assume it's NG for now.
+  // @TODO: If it's not Travis or Pantheon, assume it's CUDEN for now.
   // Eventually update to deal with ng (2.0) vs. 3.0
   if ($hosting == FALSE) {
     module_enable(array('cuden_hosting'));
@@ -46,17 +46,6 @@ function ucd_core_install() {
     'cutradition',
   ));
 
-  // these modules need to be enabled late in the install process and/or to be ignored by profile_module_manager's report.
-  //$module_array = array(
-    //'cu_users',
-    //'memcache',
-    //'varnish'  // Adding caching modules here for changes involving Travis CI testing.
-  //);
-
-  //module_enable($module_array);
-
-  //profile_module_manager_add_to_ignore($module_array);
-
   // Add blocks shortcut to shortcuts set.
   $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
   $shortcut_set->links[] =
@@ -68,26 +57,7 @@ function ucd_core_install() {
   shortcut_set_save($shortcut_set);
 
   //set default variables for user_external_invite
-  if (db_table_exists('user_external_invite') && !db_field_exists('user_external_invite', 'message')) {
-    $spec = array(
-      'type' => 'text',
-      'description' => "Custom message included with invite",
-      'not null' => FALSE,
-    );
-    db_add_field('user_external_invite', 'message', $spec);
-  }
-
-  // Add id and drop mail as primary key.
-  if (db_table_exists('user_external_invite') && !db_field_exists('user_external_invite', 'id')) {
-    db_drop_primary_key('user_external_invite');
-    $spec = array(
-      'type' => 'serial',
-      'description' => 'Primary key of the Project entity',
-      'unsigned' => TRUE,
-      'not null' => TRUE,
-    );
-    db_add_field('user_external_invite', 'id', $spec, array('primary key' => array('id')));
-  }
+  ucd_set_external_invite_variables();
 
   // change for #FIT-583 for https://www.drupal.org/node/2172293
   // Must be set before cu_forms_bundle is enabled
@@ -101,10 +71,6 @@ function ucd_core_install() {
 
   // Set message for when enabling of bundles is turned off.
   variable_set('profile_module_manager_disable_enabling_text', 'Due to unexpectedly high load on the servers, the option to enable bundles has temporarily been disabled.  Please check back tomorrow.');
-  //variable_set('rave_alerts_rss_url', 'http://www.getrave.com/rss/cuboulder/channel1');
-  //variable_set('rave_alerts_check_enable', 1);
-  //variable_set('rave_alerts_network_fail_message', 'Network Failure: Please go directly to http://alerts.colorado.edu for more information.');
-  //variable_set('rave_alerts_deafult_read_more_url', 'http://alerts.colorado.edu');
   
   // Set the syslog_identity variable to the SID.
   $cu_sid = variable_get('cu_sid', '');
@@ -174,7 +140,7 @@ The block System help was assigned to the invalid region help and has been disab
 /**
  * Set default variables for user_external_invite.
  */
-function _set_external_invite_variables() {
+function ucd_set_external_invite_variables() {
 	
   if (db_table_exists('user_external_invite') && !db_field_exists('user_external_invite', 'message')) {
     $spec = array(
@@ -197,7 +163,6 @@ function _set_external_invite_variables() {
     db_add_field('user_external_invite', 'id', $spec, array('primary key' => array('id')));
   }	
   
-  // Set default variables for user_external_invite.
   $site_owner_role = user_role_load_by_name('site_owner');
   $content_editor_role = user_role_load_by_name('content_editor');
   $edit_my_content_role = user_role_load_by_name('edit_my_content');
@@ -883,7 +848,7 @@ function ucd_core_update_7029() {
     'cu_unused_beans'
   ));
 }
-/*
+/**
  * Express 2.6.5 Update.
  *
  * Disable and uninstall securepages. Set ldap server requirement for ssl to 0.
@@ -974,6 +939,11 @@ clas-web-support@ucdenver.edu');
 
 }
 
+/**
+ * Express 2.8.0 Update.
+ *
+ * Revert All Features.
+ */
 function ucd_core_update_7035() {
   module_enable(array(
     'express_user_lock',
