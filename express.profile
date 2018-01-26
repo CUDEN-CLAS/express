@@ -235,6 +235,11 @@ function express_check_known_hosts() {
   if (defined('PANTHEON_ENVIRONMENT')) {
     return 'pantheon';
   }
+  
+  // Check for cuden.
+  if (defined('CUDEN_ENVIRONMENT')) {
+    return 'cuden';
+  }
 
   return FALSE;
 }
