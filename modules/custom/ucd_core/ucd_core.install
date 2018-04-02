@@ -1,11 +1,10 @@
 <?php
 
 /**
- * Implemenets hook_enable().
+ * @file
+ * Install hooks for cu_core module.
  */
-function ucd_core_enable() {
 
-}
 
 /**
  * Implements hook_install().
@@ -49,10 +48,10 @@ function ucd_core_install() {
   // Add blocks shortcut to shortcuts set.
   $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
   $shortcut_set->links[] =
-  array(
-    'link_path' => 'admin/content/blocks',
-    'link_title' => st('Blocks'),
-    'weight' => -18,
+    array(
+      'link_path' => 'admin/content/blocks',
+      'link_title' => st('Blocks'),
+      'weight' => -18,
   );
   shortcut_set_save($shortcut_set);
 
@@ -965,6 +964,15 @@ function ucd_core_update_7036() {
     'xmlsitemap_menu'
   ));
   drupal_uninstall_modules($module_list = array('cu_events_calendar_block'), $uninstall_dependents = FALSE);
+  ucd_core_revert_features();
+}
+
+/**
+ * Express 2.8.5 Update.
+ *
+ * Revert all features.
+ */
+function ucd_core_update_7037() {
   ucd_core_revert_features();
 }
 

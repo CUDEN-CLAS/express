@@ -4,10 +4,8 @@ core = 7.x
 version = 7.x-7.0
 package = UCD-Core
 
-
 dependencies[] = cu_redirect
 dependencies[] = cu_help
-dependencies[] = noreqnewpass
 dependencies[] = user_external_invite
 dependencies[] = syslog
 dependencies[] = cu_alerts
