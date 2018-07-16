@@ -958,7 +958,6 @@ function ucd_core_update_7035() {
  */
 function ucd_core_update_7036() {
   module_enable(array(
-    'cu_helpscout',
     'xmlsitemap',
     'xmlsitemap_node',
     'xmlsitemap_menu'
