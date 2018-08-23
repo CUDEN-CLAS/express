@@ -9,11 +9,7 @@
     <?php endif; ?>
     <div id="search" tabindex="-1">
       <div class="element-max-width search-wrapper">
-        <?php
-          if (!empty($page['search_box'])) {
-            print render($page['search_box']);
-          }
-        ?>
+        <?php print render($search_desktop); ?>
       </div>
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
@@ -32,7 +28,7 @@
               unset($options[$key]);
             }
           }
-            if (!empty($options) && !empty($page['search_box'])):
+            if (!empty($options) && !empty($search_desktop)):
           ?>
             <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link">Webmail <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="#quickLinks" class="search-toggle-quicklinks">Quick Links</a>
           <?php endif; ?>
@@ -66,8 +62,8 @@
       <div id="mobile-navigation">
         <div id="mobile-search">
           <?php
-            if (!empty($page['search_box'])) {
-              print render($page['search_box']);
+            if (!empty($search_mobile)) {
+              print render($search_mobile);
             }
           ?>
         </div>
