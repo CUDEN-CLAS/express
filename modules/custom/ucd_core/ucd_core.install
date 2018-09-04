@@ -945,7 +945,7 @@ clas-web-support@ucdenver.edu');
  */
 function ucd_core_update_7035() {
   module_enable(array(
-    'express_user_lock',
+    'express_content_edit_lock',
     'cu_unused_beans'
   ));
   module_disable(array('google_appliance'));
@@ -982,6 +982,13 @@ function ucd_core_update_7037() {
 */ 
 function ucd_core_update_7038() {
   ucd_core_revert_features();
+}
+
+function ucd_core_update_7039() {
+  module_enable(array(
+    'cuden_hosting',
+    'cu_unused_beans'
+  ));
 }
 
 /**
