@@ -32,17 +32,17 @@ function ucd_core_install() {
   }	
 
   theme_enable(array(
-    'cuhighlight',
+    #'cuhighlight',
     'cuivory',
     'culayers',
-    'cuminimal',
+    #'cuminimal',
     'cumodern',
     'curise',
     'cushadow',
-    'cusimple',
+    #'cusimple',
     'cuspirit',
-    'cuswatch',
-    'cutradition',
+    #'cuswatch',
+    #'cutradition',
   ));
 
   // Add blocks shortcut to shortcuts set.
