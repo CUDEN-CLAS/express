@@ -133,14 +133,14 @@ function cu_webform_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'recaptcha_secret_key';
-  $strongarm->value = '6Lcu0QUTAAAAAJPFHrnT8t_M9qJSmvWVDYZ4uyhU';
+  $strongarm->value = '6LfXLDEUAAAAANAUA537ExNnuMgtCOYO0P9rD1fz';
   $export['recaptcha_secret_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'recaptcha_site_key';
-  $strongarm->value = '6Lcu0QUTAAAAAMWLXkQN8uJEdyFJQAL5PEGjFr-R';
+  $strongarm->value = '6LfXLDEUAAAAAGeUWxyPMcDDFE7QJ5MpdB4N-cDH';
   $export['recaptcha_site_key'] = $strongarm;
 
   return $export;
