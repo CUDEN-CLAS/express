@@ -71,6 +71,9 @@ function cu_search_block_info() {
   $blocks['cu_search'] = array(
     'info' => t('CU Search'),
   );
+  $blocks['cu_search_mobile'] = array(
+    'info' => t('CU Search Mobile'),
+  );
   $blocks['cu_search_page'] = array(
     'info' => t('CU Search Page'),
   );
