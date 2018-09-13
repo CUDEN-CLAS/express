@@ -88,6 +88,15 @@ function cu_search_block_view($delta = '') {
       $block['options'] = $search_configs['options'];
       $block['configs'] = $search_configs['configs'];
       break;
+    case 'cu_search_mobile':
+
+      $block['subject'] = '';
+
+      $block['content'] = 'Search';
+      $search_configs = cu_search_configs();
+      $block['options'] = $search_configs['options'];
+      $block['configs'] = $search_configs['configs'];
+      break;
     case 'cu_search_page':
 
       $block['subject'] = '';
