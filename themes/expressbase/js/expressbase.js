@@ -44,7 +44,7 @@
     $('a.search-toggle-quicklinks-mobile').click(function(event){
       event.preventDefault();
       $('#quickLinks').slideToggle('fast').focus();
-      $('#quickLinks').width('97vw');
+      $('#quickLinks').width('100vw');
       $('.container').addClass('fadeIn');
     });
   });
