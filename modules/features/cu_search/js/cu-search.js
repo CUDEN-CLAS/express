@@ -10,7 +10,23 @@
 }(jQuery));
 
 (function ($) {
-  $('.cu-search-box-small form').submit(function() {
+  $('#search .cu-search-box-small form').submit(function() {
+    var query = $('input[name="query"]').val();
+    if ($('input[value="Ucdenver.edu"]').prop('checked')){
+    
+    window.location.href = 'https://www1.ucdenver.edu/search#/?query='+query+'';
+    return false;
+    }
+    if ($('input[value="Ucdenver.edu"]').length < 1){
+    window.location.href = 'https://www1.ucdenver.edu/search#/?query='+query+'';
+ 
+    return false;
+    }
+  });
+}(jQuery));
+
+(function ($) {
+  $('#mobile-search .cu-search-box-small form').submit(function() {
     var query = $('input[name="query"]').val();
     if ($('input[value="Ucdenver.edu"]').prop('checked')){
     
