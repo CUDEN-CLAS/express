@@ -995,6 +995,7 @@ function ucd_core_update_7039() {
  * Express 2.9.0 Update.
  *
  * Revert all features.  When more than 3 site owners, make all site owners site editors
+ */
  
 function ucd_core_update_7040() {
   ucd_core_revert_features();
@@ -1039,7 +1040,6 @@ function ucd_core_update_7040() {
     $query->execute();
   }
 }
-*/
 
 /*
 * Updating site and web emails to prepare for new infrastructure smtp configuration
