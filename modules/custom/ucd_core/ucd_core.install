@@ -1008,7 +1008,7 @@ function ucd_core_update_7040() {
   $site_editor_role = user_role_load_by_name('site_editor');
 
   // Remove staff users from site_owner role before calculating if there > 3.
-  $express_team_members = ['brokaw', 'linebarg', 'wetu1300', 'mortone'];
+  $express_team_members = ['kohmt'];
 
   foreach ($express_team_members as $team_member) {
     // Load the team member objecy by user name, grab the uid, see if if has the site owner role id and delete.
