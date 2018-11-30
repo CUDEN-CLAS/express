@@ -8,7 +8,7 @@
 function cu_users_install() {
   // High module weight in order to come after every module that we declare
   // permissions for.
-  db_query("UPDATE {system} SET weight = 98 WHERE name = 'cu_users'");
+  db_query("UPDATE {system} SET weight = 99 WHERE name = 'cu_users'");
 
   $developer_role = user_role_load_by_name('developer');
   $administrator_role = user_role_load_by_name('administrator');
@@ -52,7 +52,7 @@ function cu_users_update_7010() {
 
 /**
  * Create administrator drupalcs user and change sniderc's role to developer.
- 
+
 function cu_users_update_7011() {
   // If druaplcs user does not exist.
   $drupalcs_account = user_load_by_name('drupalcs');
@@ -206,7 +206,7 @@ function cu_users_update_7019() {
 
 /**
  * Add Emily as an administrator.
- 
+
 function cu_users_update_7020() {
   // If new user does not exist.
   $new_account = user_load_by_name('mortone');
@@ -230,43 +230,43 @@ function cu_users_update_7020() {
  * Remove Boulder Users
  */
  function cu_users_update_7021() {
-   
+
    $kcrafts = user_load_by_name('crafts');
    user_cancel(array(), $kcrafts->uid, 'user_cancel_reassign');
-   
+
    $reynen = user_load_by_name('kere7580');
    user_cancel(array(), $reynen->uid, 'user_cancel_reassign');
-   
+
    $fuller = user_load_by_name('jafu6031');
    user_cancel(array(), $fuller->uid, 'user_cancel_reassign');
-   
+
    $finnan = user_load_by_name('alfi2595');
    user_cancel(array(), $finnan->uid, 'user_cancel_reassign');
-   
+
    $brokawuser = user_load_by_name('brokaw');
    user_cancel(array(), $brokawuser->uid, 'user_cancel_reassign');
-   
+
    $leslieuser = user_load_by_name('leslie');
    user_cancel(array(), $leslieuser->uid, 'user_cancel_reassign');
-   
+
    $linebarguser = user_load_by_name('linebarg');
    user_cancel(array(), $linebarguser->uid, 'user_cancel_reassign');
-   
+
    $wetu1300user = user_load_by_name('wetu1300');
    user_cancel(array(), $wetu1300user->uid, 'user_cancel_reassign');
-   
+
    $mortoneuser = user_load_by_name('mortone');
    user_cancel(array(), $mortoneuser->uid, 'user_cancel_reassign');
-   
+
    $owen = user_load_by_name('owmo7772');
    user_cancel(array(), $owen->uid, 'user_cancel_reassign');
-   
+
    $snider = user_load_by_name('sniderc');
    user_cancel(array(), $snider->uid, 'user_cancel_reassign');
-   
+
    $tcox = user_load_by_name('thco6272');
    user_cancel(array(), $snider->uid, 'user_cancel_reassign');
-   
+
  }
 
 /**
@@ -336,6 +336,53 @@ If you did not submit this request or need to modify it, please contact us at cl
 
 --
 The CLAS Web Express Team
-http://clas.ucdenver.edu/web-support
+https://clas.ucdenver.edu/web-support
 clas-web-support@ucdenver.edu');
+}
+
+/**
+ * Delete user URL aliases and redirects.
+ */
+function cu_users_update_7027() {
+  db_delete('url_alias')
+    ->condition('source', db_like('user/') . '%', 'LIKE')
+    ->execute();
+
+  db_delete('redirect')
+    ->condition('source', db_like('users/') . '%', 'LIKE')
+    ->execute();
+}
+
+/**
+ * Re-add invite roles for 2.9.0 additions.
+ */
+function cu_users_update_7028() {
+
+  module_load_install('cu_core');
+  _set_external_invite_variables();
+}
+
+/**
+ * Increase module weight so that cu_users_pathauto_pattern_alter() happens in the correct order.
+ */
+function cu_users_update_7029() {
+  // High module weight in order to come after every module that we declare
+  // permissions for.
+  db_query("UPDATE {system} SET weight = 99 WHERE name = 'cu_users'");
+}
+
+/**
+ * Correct invite email templates for addon role code changes.
+ */
+function cu_users_update_7030() {
+  module_load_install('cu_core');
+  _set_external_invite_variables();
+}
+
+/**
+ * Correct invite email templates for login link.
+ */
+function cu_users_update_7031() {
+  module_load_install('cu_core');
+  _set_external_invite_variables();
 }
