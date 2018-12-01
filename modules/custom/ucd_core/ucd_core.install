@@ -21,8 +21,8 @@ function ucd_core_install() {
     module_enable(array('pantheon_hosting'));
   }
   
-  if ($hosting == 'ng') {
-    module_enable(array('ng_hosting'));
+  if ($hosting == 'cudenver') {
+    module_enable(array('cuden_hosting'));
   }
 
   // @TODO: If it's not Travis or Pantheon, assume it's CUDEN for now.

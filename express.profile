@@ -295,7 +295,7 @@ function express_check_known_hosts() {
   }
   // Check for NG.
   elseif (isset($_SERVER['WWWNG_ENV'])) {
-    return 'ng_hosting';
+    return 'cudenver';
   }
   // Check for Lando.
   elseif (getenv('LANDO_ENV') === 'yes') {
