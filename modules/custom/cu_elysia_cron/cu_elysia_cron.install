@@ -28,8 +28,8 @@ function cu_elysia_cron_install() {
   variable_set('field_cron', NULL);
   variable_set('googleanalytics_cron', '0 */12 * * *');
   variable_set('honeypot_cron', '*/15 * * * *');
-  variable_set('ldap_servers_cron', NULL);
-  variable_set('ldap_user_cron', '0 */12 * * *');
+  //variable_set('ldap_servers_cron', NULL);
+  //variable_set('ldap_user_cron', '0 */12 * * *');
   variable_set('node_cron', NULL);
   variable_set('queue_file_entity_type_determine', '*/15 * * * *');
   variable_set('queue_views_bulk_operations', '*/15 * * * *');

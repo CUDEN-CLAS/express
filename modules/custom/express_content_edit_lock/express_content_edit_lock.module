@@ -260,7 +260,7 @@ function express_content_edit_lock_user_login(&$edit, $account) {
 function express_content_edit_lock_form_user_login_alter($form, &$form_state) {
   $dev_lock = variable_get('lock_user_dev', FALSE);
   if ($dev_lock === TRUE) {
-    drupal_set_message(t('You will not be able to login to this site. It has been locked. Please contact the Web Support team. <a href="http://www.colorado.edu/webcentral/">@link_text</a>',
+    drupal_set_message(t('You will not be able to login to this site. It has been locked. Please contact the Web Support team. <a href="http://clas.ucdenver.edu/web-support/">@link_text</a>',
       array(
         '@link_text' => 'Visit Webcentral',
       )

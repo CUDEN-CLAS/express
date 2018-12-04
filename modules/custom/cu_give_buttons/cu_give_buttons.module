@@ -81,7 +81,7 @@ function cu_give_buttons_give($attrs, $content = NULL) {
  *   return html output.
  */
 function cu_give_buttons_give_tips($format, $long) {
-  $output = '[give url="http://www.colorado.edu"  color="dark/light/gold" style=regular,full size=small,large]Button Text[/give]';
+  $output = '[give url="http://clas.ucdenver.edu"  color="dark/light/gold" style=regular,full size=small,large]Button Text[/give]';
   return $output;
 }
 

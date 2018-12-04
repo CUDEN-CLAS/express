@@ -39,7 +39,7 @@ function cu_give_buttons_button_generator_form($form, &$form_state) {
   $form['button_shortcode_options']['button_shortcode_url'] = array(
     '#title' => t('Button URL'),
     '#type' => 'textfield',
-    '#default_value' => 'http://www.colorado.edu',
+    '#default_value' => 'http://clas.ucdenver.edu',
     '#description' => t('The url the button will link to.'),
   );
 
