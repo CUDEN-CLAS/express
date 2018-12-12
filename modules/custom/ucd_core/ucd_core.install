@@ -310,7 +310,7 @@ function ucd_core_update_7002() {
     ->condition('delta', 'help')
     ->execute();
 
-  cu_core_revert_features();
+  ucd_core_revert_features();
 
   // Run on every update
   ucd_core_inventory_update('7002');
