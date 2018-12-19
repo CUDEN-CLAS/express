@@ -63,14 +63,14 @@ function express_settings_menu() {
     'file path' => drupal_get_path('module', 'system'),
     'weight' => -99,
   );
-  $items['admin/settings/site-status/verify'] = array(
-    'title' => 'Verify Migration',
-    'description' => 'Confirm that this site has migrated successfully',
-    'type' => MENU_NORMAL_ITEM,
-    'page callback' => 'express_settings_site_status_page',
-    'access arguments' => array('administer express site status'),
-    'weight' => -50,
-  );
+  //$items['admin/settings/site-status/verify'] = array(
+    //'title' => 'Verify Migration',
+    //'description' => 'Confirm that this site has migrated successfully',
+    //'type' => MENU_NORMAL_ITEM,
+    //'page callback' => 'express_settings_site_status_page',
+    //'access arguments' => array('administer express site status'),
+    //'weight' => -50,
+  //);
 
   // DEFINES SITE CONFIGURATION SECTION.
   $items['admin/settings/site-configuration'] = array(
@@ -330,38 +330,38 @@ function express_settings_site_status_page() {
 /**
  * Page callback for admin/site-configuration/site-status.
  */
-function express_settings_site_status_form($form, &$form_state) {
-  $form = array();
+//function express_settings_site_status_form($form, &$form_state) {
+  //$form = array();
 
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Approve Migration'),
-  );
+  //$form['submit'] = array(
+    //'#type' => 'submit',
+    //'#value' => t('Approve Migration'),
+  //);
 
-  $form['submit']['#attributes']['class'][] = 'btn-success';
-  return $form;
+  //$form['submit']['#attributes']['class'][] = 'btn-success';
+  //return $form;
 
-}
+//}
 
 /**
  * Submit handler for express_settings_site_name_form.
  */
-function express_settings_site_status_form_submit($form, &$form_state) {
-  global $user;
-  $atlas_id = variable_get('atlas_id', NULL);
-  $site_array = atlas_api_request('sites', $atlas_id);
+//function express_settings_site_status_form_submit($form, &$form_state) {
+  //global $user;
+  //$atlas_id = variable_get('atlas_id', NULL);
+  //$site_array = atlas_api_request('sites', $atlas_id);
 
-  $site_array_new['_etag'] = $site_array['_etag'];
-  $site_array_new['verification.verification_status'] = 'approved';
-  $site_array_new['verification.verification_user'] = $user->name;
+  //$site_array_new['_etag'] = $site_array['_etag'];
+  //$site_array_new['verification.verification_status'] = 'approved';
+  //$site_array_new['verification.verification_user'] = $user->name;
 
-  atlas_api_request('sites', $atlas_id, 'PATCH', $site_array_new);
+  //atlas_api_request('sites', $atlas_id, 'PATCH', $site_array_new);
 
   //@TODO Calculate routing change time.
 
-  drupal_set_message("Migration Approved", 'status');
+  //drupal_set_message("Migration Approved", 'status');
 
-}
+//}
 
 /**
  * Page callback for admin/site-configuration/site-name.

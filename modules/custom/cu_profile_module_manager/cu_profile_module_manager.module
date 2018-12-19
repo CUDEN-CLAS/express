@@ -151,7 +151,7 @@ function curl_github_info($hash, $name) {
   $github_info = variable_get('github_info');
 
   if (!isset($github_info[$name])) {
-    $data = @file_get_contents('https://github.com/CuBoulder/' . $name . '/blob/' . $hash . '/' . $name . '.info');
+    $data = @file_get_contents('https://github.com/CUDEN-CLAS/' . $name . '/blob/' . $hash . '/' . $name . '.info');
 
     if (strpos($data, 'description = ')) {
       $start = strpos($data, 'description = ');
