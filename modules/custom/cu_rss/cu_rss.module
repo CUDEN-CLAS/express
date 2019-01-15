@@ -402,7 +402,7 @@ function cu_rss_feed_output($categories = NULL, $tags = NULL) {
   $feed_title = isset($feeds['name']) ? $feeds['name'] : variable_get('site_name') . ' - ' . variable_get('site_slogan');
 
   $channel['title'] = $feed_title;
-  $channel['description'] = 'Feed from ' . variable_get('site_name', '') . ', University of Colorado Boulder';
+  $channel['description'] = 'Feed from ' . variable_get('site_name', '') . ', CU Denver College of Liberal Arts and Sciences';
 
 
   node_feed($nids, $channel);
