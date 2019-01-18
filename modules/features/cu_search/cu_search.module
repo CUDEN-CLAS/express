@@ -154,9 +154,9 @@ function cu_search_configs() {
     'action' => base_path() . 'search',
   );
   // @TODO: Improve this
-  $rootsite = 'https://clas.ucdenver.edu/p147e68f8413/';
+  $rootsite = 'https://clas.ucdenver.edu/university-search/';
   if ( $_SERVER['SERVER_NAME'] == 'clas-test.ucdenver.pvt') {
-    $rootsite = 'https://clas.ucdenver.edu/p147e68f8413/';
+    $rootsite = 'https://clas.ucdenver.edu/university-search/';
   }
 
   $configs['all'] = array(
