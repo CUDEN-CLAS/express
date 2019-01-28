@@ -320,6 +320,7 @@ function express_permissions_secure_permissions($role) {
       'administer filters',
       'administer fitvids',
       'administer google analytics',
+      'administer google tag manager',
       'administer honeypot',
       'administer image styles',
       'administer menu',
