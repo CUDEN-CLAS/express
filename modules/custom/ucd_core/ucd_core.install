@@ -1112,6 +1112,13 @@ function ucd_redirect_update_7046() {
   secure_permissions_rebuild();
 }
 
+/**
+ * Enable Google Tag Manager for 2.9.6.
+ */
+function ucd_redirect_update_7047() {
+  module_enable(array('google_tag'));
+  variable_set('google_tag_container_id', 'GTM-W3N8WMK');
+}
 
 /**
  * Revert features by passing features in an array.

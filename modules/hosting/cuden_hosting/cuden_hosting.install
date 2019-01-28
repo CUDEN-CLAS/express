@@ -4,3 +4,9 @@
  * @file
  * Install hooks for cuden_hosting module.
  */
+function ucb_on_prem_hosting_install() {
+  module_disable(array(
+    'ng_hosting'
+  ));
+  drupal_uninstall_modules($module_list = array('ng_hosting'), $uninstall_dependents = FALSE);
+}
