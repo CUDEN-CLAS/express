@@ -1038,7 +1038,7 @@ a.mailto { padding: 5px 20px 5px 0; background: transparent url(../images/icons/
 @media screen and (min-width: 480px) { .search-toggle-quicklinks-mobile { display: block; float:left; } }
 
 @media all and (min-width: 961px) {
-    #cudenlogo {background-image:url("../images/cudenver/ucdlogo.png"); width:492px; height:50px}
+    #cudenlogo {background-image:url("../images/cudenver/ucdlogo.png"); width:322px; height:50px}
     .orgname h2 {padding:20px 0 10px 18px; color:#fff; font-size:26px}
 }
 @media all and (max-width: 960px) {
