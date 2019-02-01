@@ -1,3 +1,4 @@
+
 @file @core
 Feature: File Content Type
   When I login to the website
@@ -47,6 +48,7 @@ Examples:
   And I should see "Access the top file listed below with the following url"
 # NEXT LINE: CHECKING FOR HTTPS://
   And I should not see "http://www.colorado.edu"
+
 
 #  2.5 CREATE REVISIONS TO THE NEW NODE
 Scenario: Node functionality - Create Revision of File node
