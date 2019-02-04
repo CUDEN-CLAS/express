@@ -64,6 +64,12 @@ function cu_video_reveal_secure_permissions($role) {
       'edit any video_reveal bean',
       'view any video_reveal bean',
     ),
+    'site_editor' => array(
+      'create any video_reveal bean',
+      'delete any video_reveal bean',
+      'edit any video_reveal bean',
+      'view any video_reveal bean',
+    ),
     'site_owner' => array(
       'create any video_reveal bean',
       'delete any video_reveal bean',
