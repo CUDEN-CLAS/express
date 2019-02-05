@@ -7,6 +7,7 @@
       </div>
     </div>
     <?php endif; ?>
+    <?php print render($page['branding']); ?>
     <div id="search" tabindex="-1">
       <div class="element-max-width search-wrapper">
         <?php print render($search_desktop); ?>
@@ -14,26 +15,19 @@
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
       <header class="header container-max clearfix" id="header" role="banner">
-        <div id="branding" class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-left:3px">
-          <?php print render($page['branding']); ?>
-          <div class="mobile-menu-toggle">
-
-            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="#quickLinks" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
+        <div class="site-name-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="site-name-inner">
+            <?php
+              $vars = array();
+              $vars['site_name_tag'] = drupal_is_front_page() ? 'h1' : 'div';
+              $vars['affiliation'] = variable_get('express_site_affiliation', NULL);
+              $vars['site_name'] = $site_name;
+              print theme('site_name', $vars);
+            ?>
           </div>
         </div>
-        <div id="header-content" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clearfix">
-          <?php
-          $options = variable_get('cu_search_options', array('this' => 'this'));
-          foreach ($options as $key => $option) {
-            if (!$option) {
-              unset($options[$key]);
-            }
-          }
-            if (!empty($options) && !empty($search_desktop)):
-          ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link">Webmail <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="#quickLinks" class="search-toggle-quicklinks">Quick Links</a>
-          <?php endif; ?>
-
+        <div class="mobile-menu-toggle menu-toggle">
+          <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><i class="fa fa-reorder fa-fw"></i><span class="mobile-menu-text">Menu </span></button>
         </div>
 
       </header>
@@ -104,9 +98,8 @@
     </div>
 
     <div id="navigation-wrapper" class="navigation-wrapper">
-      <div id="orgname-wrapper" class="clearfix"><div class="orgname"><a href="<?php print $front_page; ?>" title="Home" rel="home" class="header__logo"><h2><?php print $site_name; ?></h2></a></div>
-    </div>
-      <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
+      <?php $secondary_menu = menu_secondary_menu(); ?>
+      <?php if (theme_get_setting('use_action_menu') == FALSE && !empty($secondary_menu)): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
@@ -323,8 +316,10 @@
         </div>
       <?php endif; ?>
       <div id="site-info-wrapper" class="section-wrapper site-info-wrapper">
-        <div id="site-info" class="container-max">
-          <?php print render($page['site_info']); ?>
+        <div id="site-info" class="site-info">
+          <div class="element-max-width">
+            <?php print render($page['site_info']); ?>
+          </div>
         </div>
       </div>
     </div>

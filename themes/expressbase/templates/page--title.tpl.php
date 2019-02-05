@@ -7,6 +7,7 @@
       </div>
     </div>
     <?php endif; ?>
+    <?php print render($page['branding']); ?>
     <div id="search" tabindex="-1">
       <div class="element-max-width search-wrapper">
         <?php print render($search_desktop); ?>
@@ -14,24 +15,19 @@
     </div>
     <div id="header-wrapper" class="section-wrapper header-wrapper">
       <header class="header container-max clearfix" id="header" role="banner">
-        <div id="branding" class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-          <?php print render($page['branding']); ?>
-          <div class="mobile-menu-toggle">
-            <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><span class="mobile-menu-text">Menu </span><i class="fa fa-reorder fa-fw"></i></button> <div class="clearfix"></div> <a href="http://www.google.com" class="search-toggle-quicklinks-mobile" style="padding:15px 0px 0px 0px">Quick Links</a>
+        <div class="site-name-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="site-name-inner">
+            <?php
+              $vars = array();
+              $vars['site_name_tag'] = drupal_is_front_page() ? 'h1' : 'div';
+              $vars['affiliation'] = variable_get('express_site_affiliation', NULL);
+              $vars['site_name'] = $site_name;
+              print theme('site_name', $vars);
+            ?>
           </div>
         </div>
-        <div id="header-content" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clearfix">
-          <?php
-          $options = variable_get('cu_search_options', array('this' => 'this'));
-          foreach ($options as $key => $option) {
-            if (!$option) {
-              unset($options[$key]);
-            }
-          }
-            if (!empty($options) && !empty($search_desktop)):
-          ?>
-            <a href="#search" class="search-toggle"><i class="fa fa-search"></i><span class="element-invisible">Search</span></a> <a href="http://myemail.ucdenver.edu/" class="search-toggle-link">Webmail <span style="padding:0px 5px 0px 5px">|</span></a> <a href="https://portal.prod.cu.edu/UCDAccessFedAuthLogin.html" class="search-toggle-link">UCD Access <span style="padding:0px 5px 0px 5px">|</span></a> <a href="http://www.ucdenver.edu/courselogin" class="search-toggle-link">Canvas <span style="padding:0px 5px 0px 5px">|</span></a> <a href="#quickLinks" class="search-toggle-quicklinks">Quick Links</a>
-          <?php endif; ?>
+        <div class="mobile-menu-toggle menu-toggle">
+          <button id="toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Navigation"><i class="fa fa-reorder fa-fw"></i><span class="mobile-menu-text">Menu </span></button>
         </div>
       </header>
     </div>
@@ -41,7 +37,7 @@
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">
-        
+
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
             <?php print render($page['secondary_menu']); ?>
           </div>
@@ -246,13 +242,15 @@
         </div>
       <?php endif; ?>
       <div id="site-info-wrapper" class="section-wrapper site-info-wrapper">
-        <div id="site-info" class="container-max">
-          <?php print render($page['site_info']); ?>
+        <div id="site-info" class="site-info">
+          <div class="element-max-width">
+            <?php print render($page['site_info']); ?>
+          </div>
         </div>
       </div>
     </div>
     <div class="t-contentBlock">
-  
+
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
 <div class="footerContainer" style="margin:auto; max-width:1160px">
@@ -273,10 +271,10 @@
 <p style="margin-bottom:0; font-size:14px"> Accredited by the <a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040"> <strong> Higher Learning Commission</strong></a>. All trademarks are registered property of the University. Used by permission only.</p>
 </div>
 </div>
-</div></div>    
+</div></div>
 
 </div>
-    
+
   </div>
 </div>
 <?php print render($page['bottom']); ?>
