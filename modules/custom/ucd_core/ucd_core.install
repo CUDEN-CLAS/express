@@ -1106,7 +1106,7 @@ function ucd_core_update_7045() {
 /**
  * Enable express_content_edit_lock for 2.9.4.
  */
-function ucd_redirect_update_7046() {
+function ucd_core_update_7046() {
   module_enable(array('express_content_edit_lock'));
   ucd_core_revert_features();
   secure_permissions_rebuild();
@@ -1115,7 +1115,7 @@ function ucd_redirect_update_7046() {
 /**
  * Enable Google Tag Manager for 2.9.6.
  */
-function ucd_redirect_update_7047() {
+function ucd_core_update_7047() {
   module_enable(array('google_tag'));
   variable_set('google_tag_container_id', 'GTM-W3N8WMK');
 }
