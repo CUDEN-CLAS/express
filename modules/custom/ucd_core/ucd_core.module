@@ -196,7 +196,7 @@ function ucd_core_form_express_settings_site_name_form_alter(&$form, &$form_stat
   // Set a type for each site.
   $form['express_site_type'] = array(
     '#type' => 'select',
-    '#options' => cu_core_site_types(),
+    '#options' => ucd_core_site_types(),
     '#empty_option' => '- None -',
     '#default_value' => variable_get('express_site_type', ''),
     '#access' => FALSE,
@@ -267,7 +267,7 @@ function ucd_core_form_express_settings_site_name_form_alter(&$form, &$form_stat
     // Get saved values.
     $site_type = variable_get('express_site_type', NULL);
     $saved_affiliation = variable_get('cu_site_affiliation_options', NULL);
-    if ($site_type && $affiliation = cu_core_site_affiliation_options($site_type)) {
+    if ($site_type && $affiliation = ucd_core_site_affiliation_options($site_type)) {
 
       $saved_affiliation = l($affiliation['label'], $affiliation['url']);
     }
@@ -278,7 +278,7 @@ function ucd_core_form_express_settings_site_name_form_alter(&$form, &$form_stat
     // Otherwise, pass value to options function and format as a link.
     else {
       if (!empty($saved_affiliation)) {
-        $saved_affiliation = cu_core_site_affiliation_options($saved_affiliation);
+        $saved_affiliation = ucd_core_site_affiliation_options($saved_affiliation);
         $saved_affiliation = l($saved_affiliation['label'], $saved_affiliation['url']);
       }
     }
