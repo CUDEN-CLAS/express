@@ -1,7 +1,7 @@
 name = UCD Core
 description = Provides CU Denver-specific functionality, like adding variables, to Express Core.
 core = 7.x
-version = 7.x-9.9
+version = 7.x-10.0
 package = UCD-Core
 
 dependencies[] = cu_redirect
