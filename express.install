@@ -233,7 +233,7 @@ function express_update_7011() {
  *
  * Add option for scheduling content publishing
  */
-function express_update_7006() {
+function express_update_7012() {
   // @TODO: set default field config values. Content type specific settings are captured in features
   module_enable(array('scheduler', 'express_scheduler'));
 }
