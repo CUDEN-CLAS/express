@@ -12,18 +12,21 @@ function cu_ldap_update_7001() {
     ->fields(array(
       'sid' => 'directory',
       'numeric_sid' => '1',
-      'name' => 'directory.colorado.edu',
+      'name' => 'artemis.ucdenver.pvt',
       'status' => '1',
-      'ldap_type' => 'default',
-      'address' => 'directory.colorado.edu',
+      'ldap_type' => 'ad',
+      'address' => 'ldap://artemis.ucdenver.pvt',
       'port' => '389',
       'tls' => '1',
       'followrefs' => '0',
-      'bind_method' => '2',
-      'basedn' => 'a:1:{i:0;s:27:"ou=users,dc=colorado,dc=edu";}',
-      'user_attr' => 'uid',
+      'bind_method' => '1',
+      'binddn' => 'clasmgmt',
+      'bindpw' => 'November#!%002',
+      'basedn' => 'a:1:{i:0;s:18:"dc=ucdenver,dc=pvt";}',
+      'user_attr' => 'sAMAccountName',
       'mail_attr' => 'mail',
-      'unique_persistent_attr' => '0',
+      'unique_persistent_attr' => '',
+      'unique_persistent_attr_binary' => '0',
       'user_dn_expression' => 'uid=%username,%basedn',
       'grp_unused' => '0',
       'grp_nested' => '0',
@@ -35,6 +38,6 @@ function cu_ldap_update_7001() {
     ))
       ->execute();
   } else {
-    watchdog('cu_ldap', t('Ldap_servers already had a record for directory.colorado.edu.'));
+    watchdog('cu_ldap', t('Ldap_servers already had a record for artemis.ucdenver.pvt.'));
   }
 }
