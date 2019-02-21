@@ -7,7 +7,6 @@ package = UCD-Core
 dependencies[] = cu_redirect
 dependencies[] = cu_help
 dependencies[] = user_external_invite
-dependencies[] = syslog
 dependencies[] = cu_alerts
 dependencies[] = cu_atlas
 dependencies[] = atlas
