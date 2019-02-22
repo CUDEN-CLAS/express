@@ -329,15 +329,13 @@ function cu_core_form_express_settings_site_name_form_alter(&$form, &$form_state
   );
 
   // Only show custom field if select custom is chosen.
-  if (user_access('administer matchredirect')) {
-    $form['affiliation']['#states'] = array(
-      'visible' => array(
-        'select[name="cu_site_affiliation_options"]' => array(
-          'value' => 'custom',
-        ),
+  $form['affiliation']['#states'] = array(
+    'visible' => array(
+      'select[name="cu_site_affiliation_options"]' => array(
+        'value' => 'custom',
       ),
-    );
-  }
+    ),
+  );
 
   // Show affiliation fields if user has access to edit.
   // Reusing 'access site reports' so we don't need to run update perms.
@@ -368,13 +366,11 @@ function cu_core_form_express_settings_site_name_form_alter(&$form, &$form_state
         $saved_affiliation = l($saved_affiliation['label'], $saved_affiliation['url']);
       }
     }
-    if ($saved_affiliation) {
-      $form['affiliation_display'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Affiliation',
-      );
-      $form['affiliation_display']['affiliation_values']['#markup'] = $saved_affiliation;
-    }
+    $form['affiliation_display'] = array(
+      '#type' => 'fieldset',
+      '#title' => 'Affiliation',
+    );
+    $form['affiliation_display']['affiliation_values']['#markup'] = $saved_affiliation;
   }
 }
 
