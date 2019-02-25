@@ -1141,7 +1141,7 @@ function ucd_core_update_7051() {
  * Revert features for 2.9.10
  */
 function ucd_core_update_7052() {
-  cu_core_revert_features();
+  ucd_core_revert_features();
 }
 
 /**
