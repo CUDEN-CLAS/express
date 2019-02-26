@@ -1,11 +1,3 @@
-<div id="print-header" class="clearfix">
-  <div class="print-site-name">
-    <?php print $site_name; ?>
-  </div>
-  <div class="print-site-logo">
-    <?php print $print_logo; ?>
-  </div>
-</div>
 <?php
   // Markup for site name
   $site_name_tag = drupal_is_front_page() ? 'h1' : 'div';
@@ -35,9 +27,17 @@
           </<?php print $site_name_tag; ?>>
         <?php endif; ?>
 
-        <?php if ($site_slogan): ?>
-          <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
+?>
+<div class="brand-bar brand-color-<?php print $color; ?>">
+  <div class="element-max-width-padding">
+    <div class="brand-bar-container">
+      <div class="brand-logo">
+        <a href="http://www.colorado.edu"><img src="<?php print $logo; ?>" alt="University of Colorado Boulder" /></a>
+      </div>
+      <div class="brand-links">
+      </div>
+      <div class="search-toggle-wrapper menu-toggle">
+        <button id="search-toggle" class="search-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu" aria-label="Search"><i class="fa fa-search fa-fw"></i><span class="element-invisible">Search </span></button>
       </div>
     <?php endif; ?>
   </div>

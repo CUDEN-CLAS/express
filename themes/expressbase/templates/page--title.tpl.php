@@ -7,6 +7,7 @@
       </div>
     </div>
     <?php endif; ?>
+    <?php print render($page['branding']); ?>
     <div id="search" tabindex="-1">
       <div class="element-max-width search-wrapper">
         <?php print render($search_desktop); ?>
@@ -41,7 +42,7 @@
       <?php if (theme_get_setting('use_action_menu') == FALSE): ?>
       <div id="secondary-menu-wrapper" class="section-wrapper">
         <div id="secondary-navigation" class="container-max">
-        
+
           <div class="secondary-nav-inner col-lg-12 col-md-12 clearfix">
             <?php print render($page['secondary_menu']); ?>
           </div>
@@ -246,13 +247,15 @@
         </div>
       <?php endif; ?>
       <div id="site-info-wrapper" class="section-wrapper site-info-wrapper">
-        <div id="site-info" class="container-max">
-          <?php print render($page['site_info']); ?>
+        <div id="site-info" class="site-info">
+          <div class="element-max-width">
+            <?php print render($page['site_info']); ?>
+          </div>
         </div>
       </div>
     </div>
     <div class="t-contentBlock">
-  
+
 
     <div><div class="t-footer" role="contentinfo" style="color:#aaa; text-align:center; border-color: #cfb87c; background-color: #000; border-width: 1px 0 0; border-style: solid; padding: 30px;">
 <div class="footerContainer" style="margin:auto; max-width:1160px">
@@ -273,10 +276,10 @@
 <p style="margin-bottom:0; font-size:14px"> Accredited by the <a href="https://www.hlcommission.org/component/directory/?Action=ShowBasic&amp;Itemid=&amp;instid=1040"> <strong> Higher Learning Commission</strong></a>. All trademarks are registered property of the University. Used by permission only.</p>
 </div>
 </div>
-</div></div>    
+</div></div>
 
 </div>
-    
+
   </div>
 </div>
 <?php print render($page['bottom']); ?>

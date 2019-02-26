@@ -7,6 +7,7 @@
       </div>
     </div>
     <?php endif; ?>
+    <?php print render($page['branding']); ?>
     <div id="search" tabindex="-1">
       <div class="element-max-width search-wrapper">
         <?php print render($search_desktop); ?>
@@ -323,8 +324,10 @@
         </div>
       <?php endif; ?>
       <div id="site-info-wrapper" class="section-wrapper site-info-wrapper">
-        <div id="site-info" class="container-max">
-          <?php print render($page['site_info']); ?>
+        <div id="site-info" class="site-info">
+          <div class="element-max-width">
+            <?php print render($page['site_info']); ?>
+          </div>
         </div>
       </div>
     </div>
