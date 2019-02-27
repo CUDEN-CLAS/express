@@ -42,7 +42,7 @@
     $affiliation_url = variable_get('express_site_affiliation_url', NULL);
   }
   elseif (!empty($affiliation)) {
-    $affiliation = cu_core_site_affiliation_options($affiliation);
+    $affiliation = ucd_core_site_affiliation_options($affiliation);
     $affiliation_title = $affiliation['label'];
     $affiliation_url = $affiliation['url'];
   }
