@@ -37,10 +37,8 @@ function cu_search_update_7003() {
 }
 
 /**
- * Set search to custom cse if google_cse_cx is set.
+ * Set attribute to have search links open in same window.
  */
 function cu_search_update_7004() {
-  if (variable_get('google_cse_cx', NULL)) {
-    variable_set('cu_search_options', array('this' => 'this'));
-  }
+  variable_set('google_cse_tag_attributes', 'gname="google_cse" linkTarget="_top"');
 }
