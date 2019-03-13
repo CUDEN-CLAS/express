@@ -1,0 +1,230 @@
+
+
+/*# sourceMappingURL=ucb.css.map */
+
+
+/* CU Denver Styles */
+
+.page {background: #222 !important}
+
+#header-content {width:41.3333333%; text-align:right}
+.search-toggle-link { display: none; padding: 15px 0px 0px 0px; font-size: 85%; }
+.search-toggle-quicklinks { display: none; padding: 15px 0px 0px 0px; font-size: 85%; border-bottom:3px solid #cfb87c; font-weight:600; color:#ccc }
+.search-toggle-quicklinks:hover {text-decoration:underline}
+.search-toggle-link:hover {text-decoration:underline}
+.search-toggle-quicklinks-mobile { display: none; padding: 5px 10px 0px 10px; float: right; font-size: 85%; }
+
+@media screen and (min-width: 960px) { .search-toggle-link { display: inline-block; } }
+@media screen and (min-width: 960px) { .search-toggle-quicklinks { display: inline-block; } }
+
+@media screen and (max-width: 960px) { .search-toggle-quicklinks-mobile { display: block; float:left; } }
+@media screen and (min-width: 480px) { .search-toggle-quicklinks-mobile { display: block; float:left; } }
+
+@media all and (min-width: 961px) {
+    #cudenlogo {background-image:url("../images/cudenver/ucdlogo.png"); width:322px; height:50px}
+    .orgname h2 {padding:20px 0 10px 18px; color:#fff; font-size:26px}
+}
+@media all and (max-width: 960px) {
+    #cudenlogo {background-image:url("../images/cudenver/ucdlogo-mobile.png"); width:134px; height:50px}
+    .orgname h2 {padding:20px 0 10px 18px; color:#fff; font-size:21px}
+
+}
+
+#orgname-wrapper {background-color:#222; border-top:1px solid #333; border-bottom:1px solid #444}
+.orgname {margin-right: auto; margin-left: auto; max-width: 1500px; background-color:#222}
+
+#site-info-wrapper {background-color:#222}
+
+.footerContainer {margin:auto; max-width:1160px}
+
+.footerContainer li a {
+	font-family: Arial,Helvetica,sans-serif !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	color: #ddd !important;
+}
+
+.footerContainer li a:hover {
+	text-decoration:underline
+}
+
+.u-foottextwrap a {
+   color:#ddd !important
+}
+
+.u-foottextwrap a:hover {
+   text-decoration:underline
+}
+
+#cuicContainer {
+	position: relative;
+	margin-bottom:55px;
+	border-color: #222;
+	z-index: 200;
+	background: #000 !important
+}
+
+#cuic {
+	bottom: -30px;
+	position: absolute;
+	right: 0;
+	max-width: 400px !important;
+}
+
+@media all and (max-width: 768px) {
+	#cuic {width:300px !important}
+}
+
+.ankle {
+	padding: 30px 0 60px;
+	background-color: #222
+}
+
+.ankle {
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+}
+
+.anklecontainer {
+    width: 1500px;
+}
+
+.anklecontainer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.anklecontainer {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.anklecontainer .col-md-3 {
+    width:25%;
+    float:left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ankle h3 {
+    margin-top:0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height:1.1
+}
+
+.ankle ul {
+    float:left
+}
+
+.ankleLinkTitle {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.linkArea ul {
+	padding-left:0;
+	list-style:none;
+	list-style-position:outside;
+	line-height: 1.428571429;
+	color:#fff;
+	margin-bottom:10px;
+	margin-top:0
+
+
+}
+
+.linkArea li {
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+.linkArea a {
+	display: block;
+	font-size: 14px;
+	line-height: 1.2em;
+	color:#fff
+}
+
+.linkArea a:hover {
+	text-decoration:underline
+}
+
+.col-md-9 {
+	width: 75%;
+	float:left;
+	position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.t-localFooterLinkCol {
+	float: left;
+	width:25%;
+	position: relative;
+   min-height: 1px;
+   padding-left: 15px;
+   padding-right: 15px;
+
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+
+#quickLinks {
+    padding: 15px 0;
+    position: absolute;
+    top:124px;
+    width: 100%;
+    display: none;
+    z-index: 2000;
+}
+
+#quickLinks h3 {
+    padding-bottom: 10px;
+    margin-top:20px
+}
+
+.t-quickLinks h3 {
+    border-bottom: 1px solid #555;
+}
+
+#quickLinks .list-unstyled {
+	 padding-left:0;
+	 list-style:none
+}
+
+#quickLinks li {
+    margin-bottom: 10px;
+    line-height:1.4
+}
+
+.t-quickLinks li a {
+    color: #ccc;
+    font-family: Arial,Helvetica,sans-serif !important;
+    font-size:90%
+}
+
+.t-quickLinks li a:hover {
+    color: #fff;
+    text-decoration:underline
+}
+
+.t-quickLinks {
+    background-color: #222;
+    border-bottom: 1px solid #222;
+}
+
+.quickLinksVisible {
+    display: block!important;
+    top: 0;
+    position: absolute!important;
+}
