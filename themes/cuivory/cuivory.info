@@ -2,7 +2,7 @@ name = 'Ivory'
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
-base theme = 'ucb'
+base theme = 'ucd'
 
 stylesheets[screen][] = css/ivory-styles.css
 
