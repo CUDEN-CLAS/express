@@ -807,7 +807,7 @@ function cu_shortcodes_map($attrs, $content = NULL) {
     }
     // Build the map url
     $mapurl = cu_shortcodes_join_url($url, FALSE);
-    $map = '<iframe width="100%" class="' . $size . '" src="' . $mapurl . '"></iframe><br /><a href="' . $mapurl . '" class="map-link">View Larger Map</a>';
+    $map = '<iframe width="100%" class="' . $size . '" src="' . $mapurl . '"></iframe><br /><a href="' . $mapurl . '" class="map-link" target="_blank">View Larger Map</a>';
   }
   else {
     $map = '';
