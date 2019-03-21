@@ -49,7 +49,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .banner-dark .header-wrapper .menu-toggle button, header.dark .menu-toggle button { color: #fff; border-color: rgba(128, 128, 128, 0.5); }
 .banner-dark .header-wrapper a.search-toggle:link, .banner-dark .header-wrapper a.search-toggle:visited, header.dark a.search-toggle:link, header.dark a.search-toggle:visited { color: #fff; }
 
-.banner-black .header-wrapper, header.black { background: #000; color: #fff; }
+.banner-black .header-wrapper, header.black { background: #222; color: #fff; }
 .banner-black .header-wrapper a:link, .banner-black .header-wrapper a:visited, .banner-black .header-wrapper a:hover, header.black a:link, header.black a:visited, header.black a:hover { color: #fff; }
 .banner-black .header-wrapper .menu-toggle button, header.black .menu-toggle button { color: #fff; border-color: rgba(128, 128, 128, 0.5); }
 .banner-black .header-wrapper a.search-toggle:link, .banner-black .header-wrapper a.search-toggle:visited, header.black a.search-toggle:link, header.black a.search-toggle:visited { color: #fff; }
@@ -57,7 +57,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 #branding { position: relative; }
 
 /* NEW BRANDING */
-.brand-bar { background: #000; color: #fff; padding: 10px 0px; }
+.brand-bar { background: #000; color: #fff; padding: 0px 0px; border-bottom: 1px solid #333; }
 .brand-bar a:link, .brand-bar a:visited { color: #fff; }
 .brand-bar.brand-bar-color-white { background: #000; color: #fff; }
 .brand-bar.brand-bar-color-white a:link, .brand-bar.brand-bar-color-white a:visited { color: #fff; }
@@ -65,8 +65,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 .brand-bar.brand-bar-color-black a:link, .brand-bar.brand-bar-color-black a:visited { color: #000; }
 
 .brand-bar-container { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; }
-.brand-bar-container .brand-logo img { width: 100%; max-width: 200px; min-width: 160px; height: auto; display: block; }
-@media screen and (min-width: 768px) { .brand-bar-container .brand-logo img { max-width: 240px; } }
+.brand-bar-container .brand-logo img { width: 100%; max-width: 322px; min-width: 160px; height: auto; display: block; }
+@media screen and (min-width: 768px) { .brand-bar-container .brand-logo img { max-width: 322px; } }
 
 .brand-color-white, .brand-bar-reverse, .brand-bar-dark, .brand-bar-black { color: #fff !important; }
 .brand-color-white a:link, .brand-color-white a:visited, .brand-bar-reverse a:link, .brand-bar-reverse a:visited, .brand-bar-dark a:link, .brand-bar-dark a:visited, .brand-bar-black a:link, .brand-bar-black a:visited { color: #fff !important; }

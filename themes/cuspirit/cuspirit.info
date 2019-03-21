@@ -2,7 +2,7 @@ name = Spirit
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
-base theme = 'ucb'
+base theme = 'ucd'
 
 ; Stylesheets
 stylesheets[screen][] = css/spirit-styles.css
