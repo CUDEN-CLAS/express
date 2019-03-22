@@ -3,7 +3,7 @@
  * @file
  * Contains hooks for ucd_core module.
  */
- 
+
 /**
  * Implements hook_module_implements_alter().
  *
@@ -297,109 +297,14 @@ function ucd_core_site_affiliation_options($option = NULL) {
   $options = array(
 
     'college_of_arts_sciences' => array(
-      'url' => 'https://www.colorado.edu/artsandsciences',
-      'label' => 'College of Arts & Sciences',
+      'url' => 'https://clas.ucdenver.edu',
+      'label' => 'College of Liberal Arts and Sciences',
     ),
-    'leeds_school_business' => array(
-      'url' => 'https://www.colorado.edu/business',
-      'label' => 'Leeds School of Business',
+    'business_school' => array(
+      'url' => 'https://business.ucdenver.edu',
+      'label' => 'CU Denver Business School',
     ),
-    'school_education' => array(
-      'url' => 'https://www.colorado.edu/education',
-      'label' => 'School of Education',
-    ),
-    'college_engineering_applied_science' => array(
-      'url' => 'https://www.colorado.edu/engineering',
-      'label' => 'College of Engineering & Applied Science',
-    ),
-    'college_media_communication_information' => array(
-      'url' => 'https://www.colorado.edu/cmci',
-      'label' => 'College of Media, Communication & Information',
-    ),
-    'college_music' => array(
-      'url' => 'https://www.colorado.edu/music',
-      'label' => 'College of Music',
-    ),
-    'school_law' => array(
-      'url' => 'https://www.colorado.edu/law',
-      'label' => 'School of Law',
-    ),
-    'graduate_school' => array(
-      'url' => 'https://www.colorado.edu/graduateschool',
-      'label' => 'Graduate School',
-    ),
-    'continuing_education' => array(
-      'url' => 'https://ce.colorado.edu/',
-      'label' => 'Division of Continuing Education',
-    ),
-    'university_libraries' => array(
-      'url' => 'https://www.colorado.edu/libraries',
-      'label' => 'University Libraries',
-    ),
-    'biofrontiers_institute' => array(
-      'url' => 'https://www.colorado.edu/biofrontiers',
-      'label' => 'Biofrontiers Institute',
-    ),
-    'diversity_equity_engagement' => array(
-      'url' => 'https://www.colorado.edu/odece',
-      'label' => 'Office of Diversity, Equity & Community Engagement',
-    ),
-    'faculty_affairs' => array(
-      'url' => 'https://www.colorado.edu/facultyaffairs',
-      'label' => 'Office of Faculty Affairs',
-    ),
-    'ombuds' => array(
-      'url' => 'https://www.colorado.edu/ombuds',
-      'label' => 'Ombuds Office',
-    ),
-    'research_innovation' => array(
-      'url' => 'https://www.colorado.edu/researchinnovation',
-      'label' => 'Research & Innovation Office',
-    ),
-    'strategic_initiatives' => array(
-      'url' => 'https://www.colorado.edu/osi',
-      'label' => 'Office of Strategic Initiatives',
-    ),
-    'student_affairs' => array(
-      'url' => 'https://www.colorado.edu/studentaffairs',
-      'label' => 'Division of Student Affairs',
-    ),
-    'undergraduate_education' => array(
-      'url' => '',
-      'label' => 'Office of Undergraduate Education',
-    ),
-    'enrollment_management' => array(
-      'url' => '',
-      'label' => 'Part of Enrollment Management',
-    ),
-    'finance_business_strategy' => array(
-      'url' => 'https://www.colorado.edu/fbs',
-      'label' => 'Part of Finance & Business Strategy',
-    ),
-    'human_resources' => array(
-      'url' => 'https://www.colorado.edu/hr',
-      'label' => 'Department of Human Resources',
-    ),
-    'information_technology' => array(
-      'url' => 'https://oit.colorado.edu/',
-      'label' => 'Office of Information Technology',
-    ),
-    'infrastructure_sustainability' => array(
-      'url' => 'https://www.colorado.edu/infrastructure-sustainability',
-      'label' => 'Part of Infrastructure & Sustainability',
-    ),
-    'institutional_equity' => array(
-      'url' => 'https://www.colorado.edu/oiec',
-      'label' => 'Office of Institutional Equity',
-    ),
-    'integrity_safety_compliance' => array(
-      'url' => '',
-      'label' => 'Office of Integrity, Safety & Compliance',
-    ),
-    'strategic_relations_communication' => array(
-      'url' => 'https://www.colorado.edu/strategicrelations',
-      'label' => 'Part of Strategic Relations & Communications',
-    ),
+
   );
 
   if ($option) {

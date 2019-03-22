@@ -607,65 +607,30 @@ div.image-caption  p:first-child {
 }
 
 /* Map */
-.embed-map-static {
-  display: block;
-  background-color: #eee;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding:20px;
-  position: relative;
-  span {
-    position: absolute;
-    bottom:0;
-    right:0;
-
-  }
-}
-.embed-map-label {
-  display:block;
-  background:#000;
-  color:#fff !important;
-  padding:5px 8px;
-  font-size: 11px;
-  font-weight: bold;
-  text-decoration: none;
-  &:before {
-    content: "\f14c";
-    font-family: FontAwesome;
-    margin-right:5px;
-  }
-}
-iframe.map-small,
-.embed-map-size-small {
+iframe.map-small {
   height:250px;
   width:100%;
 }
-iframe.map-medium,
-.embed-map-size-medium {
+iframe.map-medium {
   height:350px;
   width:100%;
 }
 
-iframe.map-large,
-.embed-map-size-large {
+iframe.map-large {
   height:450px;
   width:100%;
 }
 @media screen and (min-width: 768px) {
-  iframe.map-small,
-  .embed-map-size-small {
+  iframe.map-small {
     height:450px;
     width:100%;
   }
-  iframe.map-medium,
-  .embed-map-size-medium {
+  iframe.map-medium {
     height:550px;
     width:100%;
   }
 
-  iframe.map-large,
-  .embed-map-size-large {
+  iframe.map-large {
     height:650px;
     width:100%;
   }
