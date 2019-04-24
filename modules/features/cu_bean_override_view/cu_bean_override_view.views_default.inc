@@ -66,6 +66,8 @@ function cu_bean_override_view_views_default_views() {
       'empty_column' => 0,
     ),
     'type' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
