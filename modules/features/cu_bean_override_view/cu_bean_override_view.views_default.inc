@@ -70,7 +70,7 @@ function cu_bean_override_view_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'realname' => array(
+    'name' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -127,11 +127,12 @@ function cu_bean_override_view_views_default_views() {
   $handler->display->display_options['fields']['type']['table'] = 'bean';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   /* Field: Realname: Real name */
-  $handler->display->display_options['fields']['realname']['id'] = 'realname';
-  $handler->display->display_options['fields']['realname']['table'] = 'realname';
-  $handler->display->display_options['fields']['realname']['field'] = 'realname';
-  $handler->display->display_options['fields']['realname']['relationship'] = 'user';
-  $handler->display->display_options['fields']['realname']['label'] = 'Author';
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'mail';
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  $handler->display->display_options['fields']['name']['relationship'] = 'user';
+  $handler->display->display_options['fields']['name']['label'] = 'Author';
   /* Field: Block Revisions: Date changed */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'bean_revision';
@@ -209,19 +210,19 @@ function cu_bean_override_view_views_default_views() {
     3 => 0,
     5 => 0,
   );
-  /* Filter criterion: Realname: Name */
-  $handler->display->display_options['filters']['realname']['id'] = 'realname';
-  $handler->display->display_options['filters']['realname']['table'] = 'realname';
-  $handler->display->display_options['filters']['realname']['field'] = 'realname';
-  $handler->display->display_options['filters']['realname']['relationship'] = 'user';
-  $handler->display->display_options['filters']['realname']['operator'] = 'contains';
-  $handler->display->display_options['filters']['realname']['group'] = 1;
-  $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
-  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Author';
-  $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
-  $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
-  $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
+  /* Filter criterion: name: Mail */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'users';
+  $handler->display->display_options['filters']['name']['field'] = 'mail';
+  $handler->display->display_options['filters']['name']['relationship'] = 'user';
+  $handler->display->display_options['filters']['name']['operator'] = 'contains';
+  $handler->display->display_options['filters']['name']['group'] = 1;
+  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Author';
+  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     8 => 0,
