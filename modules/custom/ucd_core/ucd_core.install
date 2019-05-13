@@ -1121,6 +1121,36 @@ function ucd_core_update_7047() {
 }
 
 /**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7048() {
+  $modules = array(
+    'securepages',
+    'cu_events_bundle',
+    'flexslider',
+    'flexslider_views',
+    'flexslider_views_slideshow',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7049() {
+  $modules = array(
+    'express_user_lock',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
  * Revert features by passing features in an array.
  */
 function ucd_core_revert_features($features = NULL) {
