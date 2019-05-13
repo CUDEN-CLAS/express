@@ -10,7 +10,7 @@
  * Implements hook_install().
  */
 function ucd_core_install() {
-	
+
   $hosting = express_check_known_hosts();
 
   if ($hosting == 'travis') {
@@ -20,7 +20,7 @@ function ucd_core_install() {
   if ($hosting == 'pantheon') {
     module_enable(array('pantheon_hosting'));
   }
-  
+
   if ($hosting == 'cudenver') {
     module_enable(array('cuden_hosting'));
   }
@@ -29,7 +29,7 @@ function ucd_core_install() {
   // Eventually update to deal with ng (2.0) vs. 3.0
   if ($hosting == FALSE) {
     module_enable(array('cuden_hosting'));
-  }	
+  }
 
   theme_enable(array(
     #'cuhighlight',
@@ -70,7 +70,7 @@ function ucd_core_install() {
 
   // Set message for when enabling of bundles is turned off.
   variable_set('profile_module_manager_disable_enabling_text', 'Due to unexpectedly high load on the servers, the option to enable bundles has temporarily been disabled.  Please check back tomorrow.');
-  
+
   // Set the syslog_identity variable to the SID.
   $cu_sid = variable_get('cu_sid', '');
   if ($cu_sid) {
@@ -133,7 +133,7 @@ The block System help was assigned to the invalid region help and has been disab
   watchdog('express', 'attempted to disable uid 1');
 
   variable_set('profile_module_manager_bundle_ignore', array('cu_newsletter_bundle' => 'cu_newsletter_bundle'));
-  
+
 }
 
 /**
@@ -964,7 +964,7 @@ function ucd_core_update_7037() {
  * Express 2.8.6 Update.
  *
  * Revert all features to fix WYSIWYG filter.
-*/ 
+*/
 function ucd_core_update_7038() {
   ucd_core_revert_features();
 }
@@ -981,7 +981,7 @@ function ucd_core_update_7039() {
  *
  * Revert all features.  When more than 3 site owners, make all site owners site editors
  */
- 
+
 function ucd_core_update_7040() {
   ucd_core_revert_features();
 
@@ -1037,7 +1037,7 @@ function ucd_core_update_7041() {
 
 /**
  * Express 2.9.0 Update - Disable express_status and enable cu_status.
- 
+
 function cu_core_update_7046() {
   module_enable(array('cu_status'));
   module_disable(array('express_status'));
@@ -1155,6 +1155,19 @@ function ucd_core_update_7053() {
     'flexslider',
     'flexslider_views',
     'flexslider_views_slideshow',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7054() {
+  $modules = array(
+    'express_user_lock',
   );
   db_delete('system')
     ->condition('name', $modules, 'IN')
