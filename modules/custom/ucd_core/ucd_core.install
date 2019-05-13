@@ -1154,6 +1154,18 @@ function ucd_core_update_7053() {
     'flexslider',
     'flexslider_views',
     'flexslider_views_slideshow',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7054() {
+  $modules = array(
     'express_user_lock',
   );
   db_delete('system')
