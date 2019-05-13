@@ -1154,6 +1154,7 @@ function ucd_core_update_7053() {
     'flexslider',
     'flexslider_views',
     'flexslider_views_slideshow',
+    'express_user_lock',
   );
   db_delete('system')
     ->condition('name', $modules, 'IN')
