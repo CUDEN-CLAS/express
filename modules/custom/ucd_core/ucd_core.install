@@ -149,7 +149,7 @@ function ucd_set_external_invite_variables() {
   variable_set('user_external_invite_core_roles', $core_role_ids);
 
   // Set Content Editor as the default role to invite.
-  variable_set('user_external_invite_default_role', $core_roles['names']['content_editor']['rid']);
+  variable_set('user_external_invite_default_role', $core_roles['names']['site_editor']['rid']);
 
   // Set addon invite roles.
   $addon_roles = express_permissions_role_settings(array('core_addon'));
@@ -1146,6 +1146,36 @@ function ucd_core_update_7052() {
 }
 
 /**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7053() {
+  $modules = array(
+    'securepages',
+    'cu_events_bundle',
+    'flexslider',
+    'flexslider_views',
+    'flexslider_views_slideshow',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
+ * Delete {system} records for long-lost modules.
+ */
+function ucd_core_update_7054() {
+  $modules = array(
+    'express_user_lock',
+  );
+  db_delete('system')
+    ->condition('name', $modules, 'IN')
+    ->condition('type', 'module')
+    ->execute();
+}
+
+/**
  * Revert features by passing features in an array.
  */
 function ucd_core_revert_features($features = NULL) {
@@ -1225,5 +1255,61 @@ function ucd_core_scramble_admin() {
     $user->name = 'admin-' . user_password(10);
     $user->pass = $hashed_pass;
     user_save($user);
+  }
+}
+
+/**
+ * Implements hook_requirements().
+ * ucd_core is designed to be extended by 1 hosting module
+ */
+function ucd_core_requirements($phase) {
+  $requirements = array();
+  if ($phase === 'runtime') {
+    $t = get_t();
+
+    // Get enabled modules with hosting in the name.
+    $enabled_hosting_modules = (array) db_query("SELECT name FROM {system} WHERE type = 'module' AND status = 1 AND name LIKE '%_hosting' ORDER BY weight ASC, name ASC")->fetchCol('name');
+    $hosting_modules_count = count($enabled_hosting_modules);
+
+    if ($hosting_modules_count != 1) {
+      $hosting_modules = !empty(implode(', ', $enabled_hosting_modules)) ? implode(', ', $enabled_hosting_modules) : 'None.';
+      $requirements['cu_profile_module_manager'] = array(
+        'title' => $t('Hosting Module Status'),
+        'value' => 'Hosting modules enabled: '. $hosting_modules,
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Express 3.0.0 Update - Revert Features
+ */
+function ucd_core_update_7055() {
+  ucd_core_revert_features();
+}
+
+/**
+ * Express 3.0.2 Update - Rebuild permssions to force discovery of new roles
+ */
+function ucd_core_update_7056() {
+  secure_permissions_rebuild();
+  // Set new Content Editor as the default role to invite.
+  $site_editor_role = user_role_load_by_name('site_editor');
+  variable_set('user_external_invite_default_role', $site_editor_role->rid);
+}
+
+/**
+ * Express 3.0.2 Update - Add Form Manager to "invitable" roles if Form Bundle is enabled
+ */
+function ucd_core_update_7057() {
+  if (module_exists('cu_forms_bundle')) {
+    $form_manager_role = user_role_load_by_name('form_manager');
+
+    $invite_roles = variable_get('user_external_invite_addon_roles', array());
+    $invite_roles[] = $form_manager_role->rid;
+
+    variable_set('user_external_invite_addon_roles', $invite_roles);
   }
 }
