@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-  <div class="page">
+  <div class="page <?php print $classes; ?>">
     <!-- ALERTS -->
     <?php if (!empty($page['alerts'])): ?>
       <div id="alerts-wide-wrapper" class="section">
@@ -156,7 +156,7 @@
 
       <!-- SLIDER -->
       <?php if (!empty($page['slider'])): ?>
-        <div id="slider-wrapper" class="section slider-wrapper <?php print $section['footer-section']['class']; ?>">
+        <div id="slider-wrapper" class="section slider-wrapper <?php print $section['slider']['class']; ?>">
           <div id="slider" class="clearfix container">
             <?php print render($page['slider']); ?>
           </div>

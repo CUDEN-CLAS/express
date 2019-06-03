@@ -6,10 +6,9 @@
  * Image styles
  */
  img {
-   display: block;
+   display: inline-block;
    max-width:100%;
    height: auto;
-   min-width: 50px;
  }
 
  // Centering images
@@ -102,7 +101,7 @@ img.image-small[style*="float:left"] {
   img.image-small {
     margin-bottom: 0;
     float: left;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 0 0;
     width: 50px;
     height: auto;
     @media all and (min-width: 960px) {
@@ -111,6 +110,15 @@ img.image-small[style*="float:left"] {
       }
     }
   }
+}
+
+.node-view-mode-embed img.image-large_square_thumbnail,
+.node-view-mode-embed img.image-small {
+  margin: 0 0 20px 20px;
+  display: block;
+  width:25%;
+  height: auto;
+  float: right;
 }
 
 .image-small-square-thumbnail {
@@ -124,4 +132,21 @@ img.image-small[style*="float:left"] {
   .image-small-thumbnail {
     width:110px;
   }
+}
+
+// Minimum image width for Express Image Styles.
+.field-type-text-with-summary img,
+.field-type-text-long img,
+img.image-large,
+img.image-medium,
+img.image-small,
+img.image-large_square_thumbnail,
+img.image-large_wide_thumbnail,
+img.image-square_thumbnail,
+img.image-square,
+img.image-small_square,
+img.image-thumbnail,
+img.image-slider {
+  height: auto;
+  min-width: 50px;
 }

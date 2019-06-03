@@ -50,7 +50,7 @@ body {
 
 }
 #main-menu-wrapper {
-  background-color: $gray-dark;
+  background-color: #222;
   ul#main-menu {
     & > li > a {
       color:#ccc;
@@ -74,6 +74,9 @@ body {
     & > li > a.home-link.active {
       color:#ccc;
       background-color: transparent;
+    }
+    a.home-link {
+      margin-left: -12px;
     }
   }
 }
@@ -104,7 +107,7 @@ ul#action-menu a {
   }
 }
 #page-title-wrapper {
-  background-color: $gray-dark;
+  background-color: #171717;
   color:#fff;
   padding:20px;
   a {
