@@ -297,6 +297,8 @@ function express_permissions_secure_permissions($role) {
       'access user profiles',
       'access users overview',
       'access_google_appliance_content',
+      'administer formstack',
+      'view formstack forms',
       'administer actions',
       'administer bean settings',
       'administer bean types',
