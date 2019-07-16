@@ -42,5 +42,5 @@
     <?php endif; ?>
   </div>
 <?php else: ?>
-  <div id="cudenlogo"><h2 class="element-invisible">CU Denver CU in the City</h2></div>
+  <div><a id="cudenlogo" href="http://www.ucdenver.edu">University of Colorado Denver</a><h2 class="element-invisible"><a href="http://www.ucdenver.edu" title="http://www.ucdenver.edu">University of Colorado Denver</a></h2></div>
 <?php endif; ?>
