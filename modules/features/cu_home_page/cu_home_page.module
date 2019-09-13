@@ -14,7 +14,9 @@ function cu_home_page_preprocess_html(&$vars) {
   // only on the homepage. Besides that, the default of
   // "Page Name | Site Name | Unviersity of Colorado Boulder" is fine.
   if (drupal_is_front_page()) {
-    $vars['head_title'] = implode(' | ', array(variable_get('site_name'), t('College of Liberal Arts & Sciences')));
+    if (!module_exists('metatag')) {
+      $vars['head_title'] = implode(array(variable_get('site_name'), ' | ', variable_get('site_slogan')));
+    }
   }
 }
 

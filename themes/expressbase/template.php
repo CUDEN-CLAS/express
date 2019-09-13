@@ -78,11 +78,17 @@ function expressbase_preprocess_html(&$vars) {
   // Build title array
   // Add Campus name to title
   $slogan_title = variable_get('site_slogan_title', 'University of Colorado Denver');
-  $vars['head_title_array']['slogan'] = $slogan_title;
-  if (isset($vars['head_title'])) {
-    $vars['head_title'] .= ' | University of Colorado Denver';
+  
+  if (module_exists('metatag')) {
+    if (isset($vars['head_title'])) {
+    $vars['head_title'] .= '';
+    }
+  } else {
+    if (isset($vars['head_title']) && !drupal_is_front_page()) {
+    $vars['head_title_array']['slogan'] = $slogan_title;
+    $vars['head_title'] .= ' | ' . $slogan_title;
+    }
   }
-
   // set classes for theme configs
   $headings = theme_get_setting('headings') ? theme_get_setting('headings') : 'headings-bold';
   $vars['classes_array'][]=$headings;
