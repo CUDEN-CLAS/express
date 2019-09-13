@@ -64,7 +64,7 @@ function metatag_metatag_config_default() {
   $config->api_version = 1;
   $config->disabled = FALSE;
   $config->config = array(
-    'title' => array('value' => '[node:title] | [current-page:pager][site:name]'),
+    'title' => array('value' => '[node:title] | [current-page:pager][site:name] | [site:slogan]'),
     'description' => array('value' => '[node:summary]'),
   );
   $configs[$config->instance] = $config;
@@ -75,7 +75,7 @@ function metatag_metatag_config_default() {
     $config->api_version = 1;
     $config->disabled = FALSE;
     $config->config = array(
-      'title' => array('value' => '[term:name] | [current-page:pager][site:name]'),
+      'title' => array('value' => '[term:name] | [current-page:pager][site:name] | [site:slogan]'),
       'description' => array('value' => '[term:description]'),
     );
     $configs[$config->instance] = $config;
